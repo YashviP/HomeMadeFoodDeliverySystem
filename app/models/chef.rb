@@ -1,0 +1,2 @@
+class Chef < User
+end

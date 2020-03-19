@@ -1,0 +1,18 @@
+<% if user_signed_in? %>
+	<% if customer_signed_in? %>
+  		<li><%= link_to 'Profile', edit_customer_registration_path %></li>
+  		<li><%= link_to 'Logout', destroy_customer_session_path, method: :delete %></li>
+	<% elsif chef_signed_in? %>
+  		<li><%= link_to 'Profile', edit_chef_registration_path %></li>
+  		<li><%= link_to 'Logout', destroy_chef_session_path, method: :delete %></li>
+  	<% else  %>
+  		<li><%= link_to 'Profile', edit_user_registration_path %></li>
+  		<li><%= link_to 'Logout', destroy_user_session_path, method: :delete %></li>
+  	<% end %>
+
+<% else %>
+  <li><%= link_to "Chef SignUp", new_chef_registration_path %></li>
+  <li><%= link_to "Customer SignUp", new_customer_registration_path %></li>
+  <li><%= link_to 'Customer Login', new_customer_session_path %></li>
+  <li><%= link_to 'Chef Login', new_chef_session_path %></li>
+<% end %>
