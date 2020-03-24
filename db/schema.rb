@@ -10,17 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200319080147) do
-
-  create_table "restaurants", force: :cascade do |t|
-    t.integer  "users_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.float    "longitude"
-    t.float    "latitude"
-    t.string   "city"
-    t.index ["users_id"], name: "index_restaurants_on_users_id"
-  end
+ActiveRecord::Schema.define(version: 20200323064638) do
 
   create_table "subscriptions", force: :cascade do |t|
     t.integer  "restaurants_id"
@@ -59,13 +49,14 @@ ActiveRecord::Schema.define(version: 20200319080147) do
     t.string   "middle_name"
     t.string   "last_name"
     t.string   "mobile_number"
-    t.string   "address"
     t.string   "country"
     t.string   "state"
     t.string   "city"
     t.integer  "pincode"
-    t.boolean  "is_chef"
-    t.string   "type"
+    t.boolean  "active"
+    t.string   "address"
+    t.float    "longitude"
+    t.float    "latitude"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

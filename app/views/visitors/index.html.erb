@@ -1,7 +1,11 @@
 <% if customer_signed_in? %>
-    <p>I'm a Customer</p>
-<% end %>
+    <p><%= current_user[:longitude] %></p>
 
-<% if chef_signed_in? %>
-    <p>I'm a Chef</p>
-<% end %>
+<% elsif chef_signed_in? %>
+    <p> <%=  current_user[:longitude] %> </p>
+
+<% else %>
+	<h1> HOME MADE FOOD DELIVERY </h1>
+<%end%>
+
+

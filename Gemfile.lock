@@ -68,12 +68,28 @@ GEM
       railties (>= 4.1.0)
       responders
       warden (~> 1.2.3)
+    elasticsearch (7.5.0)
+      elasticsearch-api (= 7.5.0)
+      elasticsearch-transport (= 7.5.0)
+    elasticsearch-api (7.5.0)
+      multi_json
+    elasticsearch-transport (7.5.0)
+      faraday (>= 0.14, < 1)
+      multi_json
     erubi (1.9.0)
     erubis (2.7.0)
     execjs (2.7.0)
+    faraday (0.17.3)
+      multipart-post (>= 1.2, < 3)
     ffi (1.12.2)
+    geocoder (1.4.4)
+    geokit (1.13.1)
+    geokit-rails (2.3.1)
+      geokit (~> 1.5)
+      rails (>= 3.0)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
+    hashie (4.1.0)
     i18n (1.8.2)
       concurrent-ruby (~> 1.0)
     jbuilder (2.10.0)
@@ -94,6 +110,8 @@ GEM
     mini_mime (1.0.2)
     mini_portile2 (2.4.0)
     minitest (5.14.0)
+    multi_json (1.14.1)
+    multipart-post (2.1.1)
     nio4r (2.5.2)
     nokogiri (1.10.9)
       mini_portile2 (~> 2.4.0)
@@ -146,6 +164,10 @@ GEM
       tilt (>= 1.1, < 3)
     sassc (2.2.1)
       ffi (~> 1.9)
+    searchkick (4.3.0)
+      activemodel (>= 5)
+      elasticsearch (>= 6)
+      hashie
     simple_form (5.0.2)
       actionpack (>= 5.0)
       activemodel (>= 5.0)
@@ -191,6 +213,8 @@ DEPENDENCIES
   byebug
   coffee-rails (~> 4.1.0)
   devise
+  geocoder
+  geokit-rails
   jbuilder (~> 2.0)
   jquery-rails
   listen (~> 3.0.5)
@@ -198,6 +222,7 @@ DEPENDENCIES
   rails (~> 5.0.0)
   rails_layout
   sass-rails (~> 5.0)
+  searchkick
   simple_form
   spring
   spring-watcher-listen (~> 2.0.0)
