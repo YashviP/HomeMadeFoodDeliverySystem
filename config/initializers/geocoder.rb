@@ -1,4 +1,4 @@
 Geocoder.configure(
 
-  lookup: :google_premier, api_key: [key, client, channel])
+  #lookup: :google_premier, api_key: [key, client, channel])
 )
