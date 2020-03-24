@@ -7,7 +7,10 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
 gem 'turbolinks', '~> 5.x'
 gem 'jbuilder', '~> 2.0'
-gem 'sqlite3', '~> 1.3.0'
+
+group :development, :test do
+    gem 'sqlite3'
+end
 
 group :development do
   gem 'web-console'
@@ -18,8 +21,9 @@ group :development do
   gem 'rails_layout'
 end
 
+gem 'pg'
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-
+#Sgem 'sqlite3'
 gem 'bootstrap-sass'
 gem 'simple_form'
 gem 'devise'
