@@ -7,7 +7,7 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
 gem 'turbolinks', '~> 5.x'
 gem 'jbuilder', '~> 2.0'
-gem 'sqlite3'
+gem 'sqlite3', '~> 1.3.0'
 
 group :development do
   gem 'web-console'

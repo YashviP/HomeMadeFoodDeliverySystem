@@ -13188,3 +13188,13 @@ Creating scope :not_geocoded. Overwriting existing method Chef.not_geocoded.
 Creating scope :not_reverse_geocoded. Overwriting existing method Chef.not_reverse_geocoded.
 Creating scope :near. Overwriting existing method Chef.near.
 Creating scope :within_bounding_box. Overwriting existing method Chef.within_bounding_box.
+Creating scope :geocoded. Overwriting existing method Customer.geocoded.
+Creating scope :not_geocoded. Overwriting existing method Customer.not_geocoded.
+Creating scope :not_reverse_geocoded. Overwriting existing method Customer.not_reverse_geocoded.
+Creating scope :near. Overwriting existing method Customer.near.
+Creating scope :within_bounding_box. Overwriting existing method Customer.within_bounding_box.
+Creating scope :geocoded. Overwriting existing method Chef.geocoded.
+Creating scope :not_geocoded. Overwriting existing method Chef.not_geocoded.
+Creating scope :not_reverse_geocoded. Overwriting existing method Chef.not_reverse_geocoded.
+Creating scope :near. Overwriting existing method Chef.near.
+Creating scope :within_bounding_box. Overwriting existing method Chef.within_bounding_box.
