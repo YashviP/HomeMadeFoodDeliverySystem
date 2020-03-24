@@ -8,8 +8,8 @@ gem 'jquery-rails'
 gem 'turbolinks', '~> 5.x'
 gem 'jbuilder', '~> 2.0'
 
-group :development, :test do
-    gem 'sqlite3'
+group :production, :staging do
+  gem 'pg'
 end
 
 group :development do
@@ -19,7 +19,7 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'better_errors'
   gem 'rails_layout'
-  gem 'pg'
+  gem 'sqlite3'
 end
 
 
