@@ -38220,3 +38220,345 @@ Processing by SubscriptionsController#new_breakfast_dinner as HTML
 Completed 200 OK in 83ms (Views: 51.5ms | ActiveRecord: 0.7ms)
 
 
+Started GET "/chefs/edit" for 127.0.0.1 at 2020-03-30 09:04:08 +0530
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mChef Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."type" IN ('Chef') AND "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering devise/registrations/edit.html.erb within layouts/application
+DEPRECATION WARNING: [Devise] `DeviseHelper.devise_error_messages!`
+is deprecated and it will be removed in the next major version.
+To customize the errors styles please run `rails g devise:views` and modify the
+`devise/shared/error_messages` partial.
+ (called from block in _app_views_devise_registrations_edit_html_erb___2513895807873055645_70314084417020 at /home/yashvi/HomeMadeFoodDeliverySystem/app/views/devise/registrations/edit.html.erb:6)
+  Rendered devise/registrations/edit.html.erb within layouts/application (22.8ms)
+  Rendered layouts/_navigation_links.html.erb (0.6ms)
+  Rendered layouts/_navigation.html.erb (1.3ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 54ms (Views: 51.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-03-30 09:04:09 +0530
+Processing by VisitorsController#index as HTML
+  Rendering visitors/index.html.erb within layouts/application
+  [1m[36mChef Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."type" IN ('Chef') AND "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered visitors/index.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_navigation_links.html.erb (0.5ms)
+  Rendered layouts/_navigation.html.erb (1.2ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 36ms (Views: 34.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/chefs/edit" for 127.0.0.1 at 2020-03-30 09:04:10 +0530
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mChef Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."type" IN ('Chef') AND "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering devise/registrations/edit.html.erb within layouts/application
+DEPRECATION WARNING: [Devise] `DeviseHelper.devise_error_messages!`
+is deprecated and it will be removed in the next major version.
+To customize the errors styles please run `rails g devise:views` and modify the
+`devise/shared/error_messages` partial.
+ (called from block in _app_views_devise_registrations_edit_html_erb___2513895807873055645_70314318934000 at /home/yashvi/HomeMadeFoodDeliverySystem/app/views/devise/registrations/edit.html.erb:6)
+  Rendered devise/registrations/edit.html.erb within layouts/application (8.7ms)
+  Rendered layouts/_navigation_links.html.erb (0.6ms)
+  Rendered layouts/_navigation.html.erb (1.1ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 53ms (Views: 50.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/subscriptions/main" for 127.0.0.1 at 2020-03-30 09:35:12 +0530
+Processing by SubscriptionsController#main as HTML
+  Rendering subscriptions/main.html.erb within layouts/application
+  Rendered subscriptions/main.html.erb within layouts/application (0.6ms)
+  [1m[36mChef Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."type" IN ('Chef') AND "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navigation_links.html.erb (1.4ms)
+  Rendered layouts/_navigation.html.erb (2.0ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 38ms (Views: 37.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/subscriptions/new" for 127.0.0.1 at 2020-03-30 09:35:14 +0530
+Processing by SubscriptionsController#new as HTML
+  [1m[36mChef Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."type" IN ('Chef') AND "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering subscriptions/new.html.erb within layouts/application
+  Rendered subscriptions/new.html.erb within layouts/application (7.9ms)
+  Rendered layouts/_navigation_links.html.erb (0.6ms)
+  Rendered layouts/_navigation.html.erb (1.3ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 55ms (Views: 49.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/subscriptions/new" for 127.0.0.1 at 2020-03-30 09:35:41 +0530
+Processing by SubscriptionsController#new as HTML
+  [1m[36mChef Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."type" IN ('Chef') AND "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering subscriptions/new.html.erb within layouts/application
+  Rendered subscriptions/new.html.erb within layouts/application (6.7ms)
+  Rendered layouts/_navigation_links.html.erb (0.8ms)
+  Rendered layouts/_navigation.html.erb (1.5ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 42ms (Views: 39.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/subscriptions/new" for 127.0.0.1 at 2020-03-30 09:36:04 +0530
+Processing by SubscriptionsController#new as HTML
+  [1m[36mChef Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."type" IN ('Chef') AND "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering subscriptions/new.html.erb within layouts/application
+  Rendered subscriptions/new.html.erb within layouts/application (17.5ms)
+  Rendered layouts/_navigation_links.html.erb (1.0ms)
+  Rendered layouts/_navigation.html.erb (1.7ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 57ms (Views: 52.6ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/subscriptions" for 127.0.0.1 at 2020-03-30 09:36:35 +0530
+Processing by SubscriptionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aOUHrzy9d0LTCi6NxuG9Xlu3WDMTt2RmkCvdpnj7PNWKnYel/y5g2S656angVhWzUgy+21FFWAa4pH4qsqoyQQ==", "subscription"=>{"breakfast"=>{"monday"=>"dhosa", "tuesday"=>"idli", "wednesday"=>"pav bhaji", "thursday"=>"", "friday"=>"", "saturday"=>"", "sunday"=>"puri sabji"}, "lunch"=>{"monday"=>"aloo", "tuesday"=>"palak paneer", "wednesday"=>"", "thursday"=>"", "friday"=>"", "saturday"=>"", "sunday"=>""}, "dinner"=>{"monday"=>"ghobi sbji , 4 roti , rice , mix dal, salad,papad", "tuesday"=>"shahi paneer  , 4 roti , rice , dal, salad,papad", "wednesday"=>"", "thursday"=>"", "friday"=>"", "saturday"=>"", "sunday"=>""}, "total_price"=>"900"}, "commit"=>"save"}
+  [1m[36mChef Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."type" IN ('Chef') AND "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mChef Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."type" IN ('Chef') AND "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (1.2ms)[0m  [1m[32mINSERT INTO "subscriptions" ("created_at", "updated_at", "chef_id", "total_price", "lunch", "dinner", "breakfast") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2020-03-30 04:06:35.982525"], ["updated_at", "2020-03-30 04:06:35.982525"], ["chef_id", 1], ["total_price", 900.0], ["lunch", "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nmonday: aloo\ntuesday: palak paneer\nwednesday: ''\nthursday: ''\nfriday: ''\nsaturday: ''\nsunday: ''\n"], ["dinner", "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nmonday: ghobi sbji , 4 roti , rice , mix dal, salad,papad\ntuesday: shahi paneer  , 4 roti , rice , dal, salad,papad\nwednesday: ''\nthursday: ''\nfriday: ''\nsaturday: ''\nsunday: ''\n"], ["breakfast", "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nmonday: dhosa\ntuesday: idli\nwednesday: pav bhaji\nthursday: ''\nfriday: ''\nsaturday: ''\nsunday: puri sabji\n"]]
+  [1m[35m (133.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://127.0.0.1:3000/subscriptions/27
+Completed 302 Found in 149ms (ActiveRecord: 135.1ms)
+
+
+Started GET "/subscriptions/27" for 127.0.0.1 at 2020-03-30 09:36:36 +0530
+Processing by SubscriptionsController#show as HTML
+  Parameters: {"id"=>"27"}
+  [1m[36mChef Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."type" IN ('Chef') AND "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mSubscription Load (0.1ms)[0m  [1m[34mSELECT  "subscriptions".* FROM "subscriptions" WHERE "subscriptions"."chef_id" = ? AND "subscriptions"."id" = ? LIMIT ?[0m  [["chef_id", 1], ["id", 27], ["LIMIT", 1]]
+  Rendering subscriptions/show.html.erb within layouts/application
+  Rendered subscriptions/show.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_navigation_links.html.erb (0.8ms)
+  Rendered layouts/_navigation.html.erb (1.8ms)
+  Rendered layouts/_messages.html.erb (10.5ms)
+Completed 200 OK in 50ms (Views: 47.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/chefs/edit" for 127.0.0.1 at 2020-03-30 09:36:40 +0530
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mChef Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."type" IN ('Chef') AND "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering devise/registrations/edit.html.erb within layouts/application
+DEPRECATION WARNING: [Devise] `DeviseHelper.devise_error_messages!`
+is deprecated and it will be removed in the next major version.
+To customize the errors styles please run `rails g devise:views` and modify the
+`devise/shared/error_messages` partial.
+ (called from block in _app_views_devise_registrations_edit_html_erb___2513895807873055645_47063718851940 at /home/yashvi/HomeMadeFoodDeliverySystem/app/views/devise/registrations/edit.html.erb:6)
+  Rendered devise/registrations/edit.html.erb within layouts/application (9.1ms)
+  Rendered layouts/_navigation_links.html.erb (0.6ms)
+  Rendered layouts/_navigation.html.erb (1.3ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 46ms (Views: 42.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-03-30 09:37:33 +0530
+Processing by VisitorsController#index as HTML
+  Rendering visitors/index.html.erb within layouts/application
+  [1m[36mChef Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."type" IN ('Chef') AND "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered visitors/index.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_navigation_links.html.erb (0.8ms)
+  Rendered layouts/_navigation.html.erb (1.8ms)
+  Rendered layouts/_messages.html.erb (0.8ms)
+Completed 200 OK in 40ms (Views: 38.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/subscriptions/main" for 127.0.0.1 at 2020-03-30 09:43:38 +0530
+Processing by SubscriptionsController#main as HTML
+  Rendering subscriptions/main.html.erb within layouts/application
+  Rendered subscriptions/main.html.erb within layouts/application (0.9ms)
+  [1m[36mChef Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."type" IN ('Chef') AND "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navigation_links.html.erb (1.4ms)
+  Rendered layouts/_navigation.html.erb (2.1ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 45ms (Views: 43.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/subscriptions/new" for 127.0.0.1 at 2020-03-30 09:43:42 +0530
+Processing by SubscriptionsController#new as HTML
+  [1m[36mChef Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."type" IN ('Chef') AND "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering subscriptions/new.html.erb within layouts/application
+  Rendered subscriptions/new.html.erb within layouts/application (15.9ms)
+  Rendered layouts/_navigation_links.html.erb (1.3ms)
+  Rendered layouts/_navigation.html.erb (2.0ms)
+  Rendered layouts/_messages.html.erb (0.9ms)
+Completed 200 OK in 78ms (Views: 73.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-03-30 09:43:45 +0530
+Processing by VisitorsController#index as HTML
+  Rendering visitors/index.html.erb within layouts/application
+  [1m[36mChef Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."type" IN ('Chef') AND "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered visitors/index.html.erb within layouts/application (3.6ms)
+  Rendered layouts/_navigation_links.html.erb (0.5ms)
+  Rendered layouts/_navigation.html.erb (1.4ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 58ms (Views: 56.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/chefs/edit" for 127.0.0.1 at 2020-03-30 09:43:46 +0530
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mChef Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."type" IN ('Chef') AND "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering devise/registrations/edit.html.erb within layouts/application
+DEPRECATION WARNING: [Devise] `DeviseHelper.devise_error_messages!`
+is deprecated and it will be removed in the next major version.
+To customize the errors styles please run `rails g devise:views` and modify the
+`devise/shared/error_messages` partial.
+ (called from block in _app_views_devise_registrations_edit_html_erb___2513895807873055645_70314298069820 at /home/yashvi/HomeMadeFoodDeliverySystem/app/views/devise/registrations/edit.html.erb:6)
+  Rendered devise/registrations/edit.html.erb within layouts/application (4.6ms)
+  Rendered layouts/_navigation_links.html.erb (0.7ms)
+  Rendered layouts/_navigation.html.erb (1.4ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 34ms (Views: 32.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/chefs/edit" for 127.0.0.1 at 2020-03-30 09:46:04 +0530
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mChef Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."type" IN ('Chef') AND "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering devise/registrations/edit.html.erb within layouts/application
+DEPRECATION WARNING: [Devise] `DeviseHelper.devise_error_messages!`
+is deprecated and it will be removed in the next major version.
+To customize the errors styles please run `rails g devise:views` and modify the
+`devise/shared/error_messages` partial.
+ (called from block in _app_views_devise_registrations_edit_html_erb___2513895807873055645_70314303368880 at /home/yashvi/HomeMadeFoodDeliverySystem/app/views/devise/registrations/edit.html.erb:6)
+  Rendered devise/registrations/edit.html.erb within layouts/application (8.2ms)
+  Rendered layouts/_navigation_links.html.erb (0.8ms)
+  Rendered layouts/_navigation.html.erb (1.6ms)
+  Rendered layouts/_messages.html.erb (0.7ms)
+Completed 200 OK in 55ms (Views: 52.4ms | ActiveRecord: 0.4ms)
+
+
+Started PUT "/chefs" for 127.0.0.1 at 2020-03-30 09:46:08 +0530
+Processing by Devise::RegistrationsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"S2jgnxjq3rtX/AN5d5tGDhs4k8SwzH0gGcwJcPoRcrypEGCV23nJIKpPxF1RLO7jEoN1LPI+QUAxQ6r8MEB8KA==", "chef"=>{"first_name"=>"yashvi", "middle_name"=>"", "last_name"=>"patel", "mobile_number"=>"09582906755", "email"=>"patel2903@gmail.com", "address"=>"T-172 GALI NUMBER 6 SHIVAJI NAGAR", "city"=>"NARELA", "state"=>"DELHI", "country"=>"India", "pincode"=>"110040", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "current_password"=>"[FILTERED]"}, "commit"=>"Update"}
+  [1m[36mChef Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."type" IN ('Chef') AND "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mChef Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."type" IN ('Chef') AND "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering devise/registrations/edit.html.erb within layouts/application
+DEPRECATION WARNING: [Devise] `DeviseHelper.devise_error_messages!`
+is deprecated and it will be removed in the next major version.
+To customize the errors styles please run `rails g devise:views` and modify the
+`devise/shared/error_messages` partial.
+ (called from block in _app_views_devise_registrations_edit_html_erb___2513895807873055645_70314298715000 at /home/yashvi/HomeMadeFoodDeliverySystem/app/views/devise/registrations/edit.html.erb:6)
+  Rendered /home/yashvi/.rvm/gems/ruby-2.6.3/gems/devise-4.7.1/app/views/devise/shared/_error_messages.html.erb (0.8ms)
+  Rendered devise/registrations/edit.html.erb within layouts/application (22.8ms)
+  Rendered layouts/_navigation_links.html.erb (0.7ms)
+  Rendered layouts/_navigation.html.erb (1.4ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 1342ms (Views: 53.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-03-30 09:46:15 +0530
+Processing by VisitorsController#index as HTML
+  Rendering visitors/index.html.erb within layouts/application
+  [1m[36mChef Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."type" IN ('Chef') AND "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered visitors/index.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_navigation_links.html.erb (0.6ms)
+  Rendered layouts/_navigation.html.erb (1.3ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 38ms (Views: 36.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/subscriptions/main" for 127.0.0.1 at 2020-03-30 09:46:19 +0530
+Processing by SubscriptionsController#main as HTML
+  Rendering subscriptions/main.html.erb within layouts/application
+  Rendered subscriptions/main.html.erb within layouts/application (0.9ms)
+  [1m[36mChef Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."type" IN ('Chef') AND "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navigation_links.html.erb (1.4ms)
+  Rendered layouts/_navigation.html.erb (2.0ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 33ms (Views: 32.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-03-30 09:46:21 +0530
+Processing by VisitorsController#index as HTML
+  Rendering visitors/index.html.erb within layouts/application
+  [1m[36mChef Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."type" IN ('Chef') AND "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered visitors/index.html.erb within layouts/application (3.7ms)
+  Rendered layouts/_navigation_links.html.erb (0.6ms)
+  Rendered layouts/_navigation.html.erb (1.4ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 59ms (Views: 55.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/chefs/edit" for 127.0.0.1 at 2020-03-30 09:46:29 +0530
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mChef Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."type" IN ('Chef') AND "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering devise/registrations/edit.html.erb within layouts/application
+DEPRECATION WARNING: [Devise] `DeviseHelper.devise_error_messages!`
+is deprecated and it will be removed in the next major version.
+To customize the errors styles please run `rails g devise:views` and modify the
+`devise/shared/error_messages` partial.
+ (called from block in _app_views_devise_registrations_edit_html_erb___2513895807873055645_70314295646540 at /home/yashvi/HomeMadeFoodDeliverySystem/app/views/devise/registrations/edit.html.erb:6)
+  Rendered devise/registrations/edit.html.erb within layouts/application (7.2ms)
+  Rendered layouts/_navigation_links.html.erb (0.7ms)
+  Rendered layouts/_navigation.html.erb (1.3ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 40ms (Views: 37.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/subscriptions/main" for 127.0.0.1 at 2020-03-30 09:46:31 +0530
+Processing by SubscriptionsController#main as HTML
+  Rendering subscriptions/main.html.erb within layouts/application
+  Rendered subscriptions/main.html.erb within layouts/application (1.2ms)
+  [1m[36mChef Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."type" IN ('Chef') AND "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navigation_links.html.erb (1.5ms)
+  Rendered layouts/_navigation.html.erb (2.2ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 47ms (Views: 45.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/chefs/edit" for 127.0.0.1 at 2020-03-30 09:46:57 +0530
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mChef Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."type" IN ('Chef') AND "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering devise/registrations/edit.html.erb within layouts/application
+DEPRECATION WARNING: [Devise] `DeviseHelper.devise_error_messages!`
+is deprecated and it will be removed in the next major version.
+To customize the errors styles please run `rails g devise:views` and modify the
+`devise/shared/error_messages` partial.
+ (called from block in _app_views_devise_registrations_edit_html_erb___2513895807873055645_70314291950280 at /home/yashvi/HomeMadeFoodDeliverySystem/app/views/devise/registrations/edit.html.erb:6)
+  Rendered devise/registrations/edit.html.erb within layouts/application (6.3ms)
+  Rendered layouts/_navigation_links.html.erb (0.6ms)
+  Rendered layouts/_navigation.html.erb (1.2ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 38ms (Views: 36.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/subscriptions/main" for 127.0.0.1 at 2020-03-30 09:46:58 +0530
+Processing by SubscriptionsController#main as HTML
+  Rendering subscriptions/main.html.erb within layouts/application
+  Rendered subscriptions/main.html.erb within layouts/application (0.6ms)
+  [1m[36mChef Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."type" IN ('Chef') AND "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navigation_links.html.erb (2.1ms)
+  Rendered layouts/_navigation.html.erb (2.7ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 53ms (Views: 52.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-03-30 09:47:00 +0530
+Processing by VisitorsController#index as HTML
+  Rendering visitors/index.html.erb within layouts/application
+  [1m[36mChef Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."type" IN ('Chef') AND "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered visitors/index.html.erb within layouts/application (1.5ms)
+  Rendered layouts/_navigation_links.html.erb (0.7ms)
+  Rendered layouts/_navigation.html.erb (1.6ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 30ms (Views: 28.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/subscriptions/main" for 127.0.0.1 at 2020-03-30 09:47:17 +0530
+Processing by SubscriptionsController#main as HTML
+  Rendering subscriptions/main.html.erb within layouts/application
+  Rendered subscriptions/main.html.erb within layouts/application (0.6ms)
+  [1m[36mChef Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."type" IN ('Chef') AND "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navigation_links.html.erb (1.8ms)
+  Rendered layouts/_navigation.html.erb (2.4ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 46ms (Views: 45.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-03-30 09:54:36 +0530
+Processing by VisitorsController#index as HTML
+  Rendering visitors/index.html.erb within layouts/application
+  Rendered visitors/index.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_navigation_links.html.erb (0.5ms)
+  Rendered layouts/_navigation.html.erb (1.2ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 36ms (Views: 35.5ms | ActiveRecord: 0.0ms)
+
+
