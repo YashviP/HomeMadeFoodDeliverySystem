@@ -1,8 +1,9 @@
 <% if customer_signed_in? %>
-    <p><%= current_user[:longitude] %></p>
+    <p><%= current_chef[:email]%></p>
 
 <% elsif chef_signed_in? %>
-    <p> <%=  current_user[:longitude] %> </p>
+    <p><%= current_chef[:email]%></p>
+    <p><%= current_user[:latitude] %></p>
 
 <% else %>
 	<h1> HOME MADE FOOD DELIVERY </h1>

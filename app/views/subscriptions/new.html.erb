@@ -1,0 +1,23 @@
+<div class="row">
+  <div class="col-sm-4 col-sm-offset-4">	
+
+     
+	  <%= form_for :subscription , url:subscriptions_path do |f| %>
+    	<p>
+			<%= f.fields_for :lunch do |l| %>
+      			<%= l.text_field :monday %>
+      			<%= l.text_field :tuesday %>
+   			<% end %>
+
+		</p>
+     
+    <p>
+		<%= f.submit(:save , {:class => 'btn btn-primary'})%>
+		<%= link_to 'Back', root_path, :class =>'btn btn-primary' %>
+	</p>
+	
+	<% end %>
+      
+
+   </div>
+</div>

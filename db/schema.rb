@@ -10,25 +10,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200323064638) do
+ActiveRecord::Schema.define(version: 20200327125803) do
 
   create_table "subscriptions", force: :cascade do |t|
-    t.integer  "restaurants_id"
+    t.integer  "users_id"
     t.datetime "created_at",            null: false
     t.datetime "updated_at",            null: false
     t.boolean  "is_breakfast_included"
-    t.string   "breakfast_item"
     t.decimal  "breakfast_price"
     t.boolean  "is_lunch_included"
-    t.string   "lunch_item"
     t.decimal  "lunch_price"
     t.boolean  "is_dinner_included"
-    t.string   "dinner_item"
     t.decimal  "dinner_price"
     t.boolean  "is_veg"
     t.boolean  "is_nonVeg"
-    t.integer  "users_id"
-    t.index ["restaurants_id"], name: "index_subscriptions_on_restaurants_id"
+    t.integer  "chef_id"
+    t.integer  "customer_id"
+    t.float    "total_price"
+    t.text     "lunch"
+    t.text     "dinner"
+    t.text     "breakfast"
     t.index ["users_id"], name: "index_subscriptions_on_users_id"
   end
 
@@ -53,10 +54,15 @@ ActiveRecord::Schema.define(version: 20200323064638) do
     t.string   "state"
     t.string   "city"
     t.integer  "pincode"
-    t.boolean  "active"
+    t.boolean  "is_chef"
+    t.string   "type"
     t.string   "address"
     t.float    "longitude"
     t.float    "latitude"
+    t.decimal  "House_no"
+    t.decimal  "street_no"
+    t.string   "street_name"
+    t.string   "district"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

@@ -1,9 +1,11 @@
 class Customer < User
-	has_many :subscription
 
-  geocoded_by :address
-  after_validation :geocode, if: :address_changed?
+	geocoded_by :full_address
+    after_validation :geocode
 
- 
-  
+    def full_address
+      [address,city,pincode].compact.join(',')
+    end
+
+
 end

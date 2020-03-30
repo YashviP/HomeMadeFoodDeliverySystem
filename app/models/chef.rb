@@ -1,8 +1,12 @@
 class Chef < User
+
 	has_many :subscription
+    
+  	geocoded_by :full_address
+    after_validation :geocode
 
-  geocoded_by :address
-  after_validation :geocode, if: :address_changed?
+    def full_address
+      [address,city,pincode].compact.join(',')
+    end
 
- 
 end

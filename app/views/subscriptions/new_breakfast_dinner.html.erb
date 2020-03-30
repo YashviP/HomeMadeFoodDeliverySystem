@@ -1,0 +1,157 @@
+
+  <div class="page-header">
+    <h1>Weekly Meal Planner (Breakfast AND Dinner) </h1>
+  </div>
+
+  <div class=".container-fluid" >
+  <div class="row">
+
+    <div class="col-md-10">
+
+      <div class="panel panel-default">
+        <div class="panel-heading">Weekly Planner</div>
+  <%= form_for :subscription , url:subscriptions_path do |f| %>
+
+
+      <% if @subscription.errors.any? %>
+      <% @subscription.errors.full_messages.each do |msg| %>
+      <div class="alert alert-danger"><%= msg%></div>
+      <% end %>
+      <% end %>
+        <table class="table planner">
+          <thead>
+            <tr>
+              <th>Week Day</th>
+              <th>Breakfast</th>
+              <th>Dinner</th>
+            </tr>
+          </thead>
+          <tbody>
+
+          
+        
+        	 <tr>
+
+              <td>Monday</td>
+              <%= f.fields_for :breakfast do |b|  %>
+              		<td><%= b.text_field :monday %></td>
+              <% end %>
+
+              <%= f.fields_for :dinner do |d|  %>
+              		<td><%= d.text_field :monday %></td>
+              <% end %>
+         
+        	</tr>  
+
+        	 <tr>
+
+              <td>Tuesday</td>
+              <%= f.fields_for :breakfast do |b|  %>
+              		<td><%= b.text_field :tuesday %></td>
+              <% end %>
+
+              <%= f.fields_for :dinner do |d|  %>
+              		<td><%= d.text_field :tuesday %></td>
+              <% end %>
+         
+        	</tr>  
+
+        	 <tr>
+
+              <td>Wednesday</td>
+              <%= f.fields_for :breakfast do |b|  %>
+              		<td><%= b.text_field :wednesday %></td>
+              <% end %>
+
+              <%= f.fields_for :dinner do |d|  %>
+              		<td><%= d.text_field :wednesday %></td>
+              <% end %>
+         
+        	</tr>  
+
+           <tr>
+
+              <td>Thursday</td>
+              <%= f.fields_for :breakfast do |b|  %>
+              		<td><%= b.text_field :thursday %></td>
+              <% end %>
+
+              <%= f.fields_for :dinner do |d|  %>
+              		<td><%= d.text_field :thursday %></td>
+              <% end %>
+         
+        	</tr>  
+
+
+        	 <tr>
+
+              <td>Friday</td>
+              <%= f.fields_for :breakfast do |b|  %>
+              		<td><%= b.text_field :friday %></td>
+              <% end %>
+
+              <%= f.fields_for :dinner do |d|  %>
+              		<td><%= d.text_field :friday %></td>
+              <% end %>
+         
+        	</tr>  
+
+
+        	 <tr>
+
+              <td>Saturday</td>
+              <%= f.fields_for :breakfast do |b|  %>
+              		<td><%= b.text_field :saturday %></td>
+              <% end %>
+
+              <%= f.fields_for :dinner do |d|  %>
+              		<td><%= d.text_field :saturday %></td>
+              <% end %>
+         
+        	</tr>  
+
+           <tr>
+
+              <td>Sunday</td>
+              <%= f.fields_for :breakfast do |b|  %>
+                  <td><%= b.text_field :sunday %></td>
+              <% end %>
+
+              <%= f.fields_for :dinner do |d|  %>
+                  <td><%= d.text_field :sunday %></td>
+              <% end %>
+         
+          </tr>  
+
+          
+        	<tr>
+             <td><b>Total Price</b></td>
+             <td><%= f.text_field :total_price %></td>
+             <td> </td>
+          </tr>
+
+          <tr>
+          <td><%= f.submit(:save , {:class => 'btn btn-primary'})%></td>
+          <td><%= link_to 'Back', root_path, :class =>'btn btn-primary' %></td>
+          <td> </td>
+          <%end%>
+
+           </tr>
+
+
+
+          </tbody>
+       </table>
+
+ 
+       
+  </div>
+</div>
+</div>
+</div>
+             
+             
+         
+ 			
+         
+        

@@ -115,9 +115,10 @@ GEM
     nokogiri (1.10.9)
       mini_portile2 (~> 2.4.0)
     orm_adapter (0.5.0)
-    pg (1.2.3)
     puma (3.12.4)
     rack (2.2.2)
+    rack-proxy (0.6.5)
+      rack
     rack-test (0.6.3)
       rack (>= 1.0)
     rails (5.0.7.2)
@@ -182,7 +183,7 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
-    sqlite3 (1.4.2)
+    sqlite3 (1.3.13)
     thor (1.0.1)
     thread_safe (0.3.6)
     tilt (2.0.10)
@@ -200,6 +201,10 @@ GEM
       activemodel (>= 5.0)
       bindex (>= 0.4.0)
       railties (>= 5.0)
+    webpacker (4.2.2)
+      activesupport (>= 4.2)
+      rack-proxy (>= 0.6.1)
+      railties (>= 4.2)
     websocket-driver (0.6.5)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.4)
@@ -212,12 +217,11 @@ DEPENDENCIES
   bootstrap-sass
   coffee-rails (~> 4.1.0)
   devise
-  geocoder
+  geocoder (~> 1.6, >= 1.6.2)
   geokit-rails
   jbuilder (~> 2.0)
   jquery-rails
   listen (~> 3.0.5)
-  pg
   puma (~> 3.0)
   rails (~> 5.0.0)
   rails_layout
@@ -226,11 +230,12 @@ DEPENDENCIES
   simple_form
   spring
   spring-watcher-listen (~> 2.0.0)
-  sqlite3
+  sqlite3 (~> 1.3.0)
   turbolinks (~> 5.x)
   tzinfo-data
   uglifier (>= 1.3.0)
   web-console
+  webpacker (~> 4.x)
 
 BUNDLED WITH
    1.17.2
