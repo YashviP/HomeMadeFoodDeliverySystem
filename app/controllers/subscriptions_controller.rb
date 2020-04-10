@@ -1,7 +1,11 @@
 class SubscriptionsController < ApplicationController
-
+	before_action :authenticate_user!
 	def index
-		@subscriptions = current_chef.subscription.all
+		if params[:search]
+			@search_term=params[:search]
+			@home_restarants=Chef.near(@search_term,5,units: :km)
+			
+		end
 	end
 
 	def new
@@ -23,12 +27,33 @@ class SubscriptionsController < ApplicationController
 		end
 	end
 
+
+
 	def show_breakfast_dinner
 		@subscription=current_chef.subscription.find(params[:id])
 	end
 
     def show 
 		@subscription=current_chef.subscription.find(params[:id])
+	end
+
+	def show_menu
+		@chef=Chef.find(params[:chef_id])
+		@menu=@chef.subscription
+		
+	end
+
+
+	
+	
+
+	def bd
+		@subs=Subscription.find(params[:subs])
+
+	end 
+
+	def bld
+		@subs=Subscription.find(params[:subs])
 	end
 
 	def create

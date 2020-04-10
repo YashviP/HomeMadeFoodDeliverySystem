@@ -1,12 +1,24 @@
+<script src="https://cdn.jsdelivr.net/npm/places.js@1.18.1"></script>
 <% if customer_signed_in? %>
-    <p><%= current_chef[:email]%></p>
+<div class="form-inputs">
+    <%= form_for "",url: subscriptions_path,role: "search", method: :get do %>
+    	<%= text_field_tag :search, @search_term,placeholder: "Search..." %>
+    <% end %>
+</div>
 
 <% elsif chef_signed_in? %>
-    <p><%= current_chef[:email]%></p>
-    <p><%= current_user[:latitude] %></p>
+    <p><%= current_chef[:longitude]%></p>
+    <p><%= current_chef[:latitude] %></p>
 
 <% else %>
 	<h1> HOME MADE FOOD DELIVERY </h1>
 <%end%>
 
-
+<script>
+  var placesAutocomplete = places({
+    appId: "plSCCF6JX22J",
+    apiKey: "b27eb8a3c03798cdc66b504cd851ff4d",
+    restrictSearchableAttributes: "city",
+    container: document.querySelector('#search')
+  });
+</script>

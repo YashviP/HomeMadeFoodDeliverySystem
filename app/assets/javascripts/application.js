@@ -15,3 +15,12 @@
 //= require turbolinks
 //= require bootstrap-sprockets
 //= require_tree .
+//= require jquery_ujs
+//= require gmaps-auto-complete
+require chosen-jquery
+require country_state_select
+
+$(document).ready(function() { 
+  GmapsAutoComplete.init();
+  GmapsAutoComplete.autoCompleteInit();
+});

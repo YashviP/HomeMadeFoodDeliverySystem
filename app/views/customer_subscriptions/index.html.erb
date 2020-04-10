@@ -1,0 +1,10 @@
+<% @customer_subscriptions.each do |customer_subscription| %>
+
+    <div class="well">
+		<h1><%= customer_subscription.id %></h1>
+		<h1><%= customer_subscription.subscription_id %></h1>
+
+	 	<%= link_to 'Detail',customer_subscription_path(customer_subscription) %>    
+	</div>
+
+<% end %>

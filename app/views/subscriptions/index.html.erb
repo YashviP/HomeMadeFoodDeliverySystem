@@ -1,1 +1,14 @@
-<h1> add new subscription </h1>
+<% @home_restarants.each do |h| %>
+    <div class="well">
+
+    	
+		<p><%=h.first_name %>'s Home Food</p>
+         
+		<li><%= link_to 'menu', show_menu_subscriptions_path(:chef_id=>h.id) %></li>
+ 	
+		
+
+    </div>
+<% end %>
+
+

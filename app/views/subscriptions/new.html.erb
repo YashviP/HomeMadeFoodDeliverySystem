@@ -10,14 +10,12 @@
 
       <div class="panel panel-default">
         <div class="panel-heading">Weekly Planner</div>
-  <%= form_for :subscription , url:subscriptions_path do |f| %>
+        
+  <%= simple_form_for(@subscription, :url => subscriptions_path, :validate => true) do |f| %>
 
-
-      <% if @subscription.errors.any? %>
-      <% @subscription.errors.full_messages.each do |msg| %>
-      <div class="alert alert-danger"><%= msg%></div>
-      <% end %>
-      <% end %>
+      <%= f.error_notification %>
+     
+    
         <table class="table planner">
           <thead>
             <tr>

@@ -1,0 +1,9 @@
+<% @menu.each do |s| %>
+     
+        <% if s.lunch.empty? %>
+			<li><%= link_to 'bd', bd_subscriptions_path(:subs=>s) %></li>
+		<% else %>
+			<li><%= link_to 'bld', bd_subscriptions_path(:subs=>s) %></li>
+ 		<% end %>
+	
+<%end%>

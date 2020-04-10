@@ -2,6 +2,7 @@
 	<% if customer_signed_in? %>
   		<li><%= link_to 'Profile', edit_customer_registration_path %></li>
   		<li><%= link_to 'Logout', destroy_customer_session_path, method: :delete %></li>
+      <li><%= link_to "Your Subscriptions " , customer_subscriptions_path %></li> 
 	<% elsif chef_signed_in? %>
   		<li><%= link_to 'Profile', edit_chef_registration_path %></li>
   		<li><%= link_to 'Logout', destroy_chef_session_path, method: :delete %><li>

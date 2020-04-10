@@ -18,3 +18,5 @@
 console.log('Hello World from Webpacker')
 
 import "controllers"
+import '@client-side-validations/client-side-validations'
+import 'country_state_select'

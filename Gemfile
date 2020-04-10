@@ -27,3 +27,14 @@ gem 'geokit-rails'
 gem 'searchkick'
 gem 'webpacker', '~> 4.x'
 gem 'geocoder', '~> 1.6', '>= 1.6.2'
+
+gem 'client_side_validations'
+gem 'client_side_validations-simple_form'
+gem 'chosen-rails'
+gem 'country_state_select', git: 'git://github.com/arvindvyas/Country-State-Select', branch: :master
+gem "reform"#, "~> 2.0"
+gem "reform-rails"
+gem 'mainstreet'
+gem 'country-select'
+gem "figaro"
+gem 'gmaps-autocomplete-rails'

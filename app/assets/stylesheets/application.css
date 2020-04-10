@@ -13,3 +13,6 @@
  *= require_tree .
  *= require_self
  */
+
+ *= require chosen
+ *= require gmaps-auto-complete
