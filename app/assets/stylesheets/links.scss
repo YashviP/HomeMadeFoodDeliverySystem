@@ -1,0 +1,36 @@
+
+.cont {
+  width: 100%;
+}
+.l-half {
+
+  position: absolute;
+  left: 5%;
+  top: 25%;
+  bottom:20%;
+  width: 40%;
+  height: 55%;
+  z-index: 1;
+  background: -moz-linear-gradient(-45deg,  #cfd8dc 0%, #607d8b 100%, #b0bec5 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(-45deg,  #cfd8dc 0%,#607d8b 100%,#b0bec5 100%);
+  text-align: center;
+ 
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+.r-half {
+  position: absolute;
+  right: 5%;
+  width: 40%;
+  height: 55%;
+  bottom: 20%;
+  top: 25%;
+  z-index: 1;
+   background: -moz-linear-gradient(-45deg,  #cfd8dc 0%, #607d8b 100%, #b0bec5 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(-45deg,  #cfd8dc 0%,#607d8b 100%,#b0bec5 100%);
+  text-align: center;
+  text-align: center;
+ 
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+
+}

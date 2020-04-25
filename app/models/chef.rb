@@ -8,7 +8,6 @@ class Chef < User
   def full_address
     [city,state].compact.join(',')
   end
-    
 
   number_regex = /\d[0-9]\)*\z/
   geocoded_by :city

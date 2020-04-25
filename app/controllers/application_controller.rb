@@ -10,7 +10,7 @@ class ApplicationController < ActionController::Base
   # rescue_from ActionController::RoutingError, with: -> { render_404  }
    # rescue_from ActiveRecord::RecordNotFound, with: -> { render_404  }
   #end
-
+  Rails.application.config.paths["app/views"] << 'login_links'
   def render_404
     respond_to do |format|
       format.html { render template: 'errors/not_found', status: 404 }
@@ -23,6 +23,8 @@ class ApplicationController < ActionController::Base
 	def configure_permitted_parameters
 		devise_parameter_sanitizer.permit(:sign_up, keys:[:users_id ,:first_name,:middle_name,:last_name,:mobile_number,:address,:country,:city,:state,:pincode,:email,:password,:password_confirmation,:longitude,:latitude,:House_no,:street_no,:street_name,:district])
 		devise_parameter_sanitizer.permit(:account_update, keys:[:first_name,:middle_name,:last_name,:mobile_number,:address,:country,:city,:state,:pincode,:email,:password,:password_confirmation])
-    end
+  end
+
+  
 
 end

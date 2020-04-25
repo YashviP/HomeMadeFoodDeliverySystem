@@ -6,12 +6,16 @@ class CustomerSubscriptionsController < ApplicationController
  	end
 	
  	def index
- 		 @customer_subscriptions=current_customer.customer_subscription.all
+ 		 @customer_subscriptions=current_customer.customer_subscription.all	
+ 	end
 
- 	end
- 	def show
+
+ 	def show		
  		@customer_subscription=current_customer.customer_subscription.find(params[:id])
- 		@customer_subscription=Subscription.find(@customer_subscription.subscription_id)
+ 		@subscription=Subscription.find(@customer_subscription.subscription_id)
+ 		@chef=Chef.find(@subscription.chef_id)
  	end
+
+ 
 
 end

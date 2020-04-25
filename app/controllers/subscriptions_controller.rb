@@ -1,11 +1,11 @@
 class SubscriptionsController < ApplicationController
 	before_action :authenticate_user!
 	def index
-		if params[:search]
-			@search_term=params[:search]
-			@home_restarants=Chef.near(@search_term,5,units: :km)
+			p params[:search]
+			if params[:search]
+				@home_restarants=Chef.near(params[:search],5,units: :km)
 			
-		end
+			end
 	end
 
 	def new
