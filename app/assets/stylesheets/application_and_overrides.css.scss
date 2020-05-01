@@ -1,4 +1,4 @@
-// import the CSS framework
+//import the CSS framework
 @import "bootstrap-sprockets";
 
 $bootstrap-sass-asset-helper: false !default;
@@ -19,7 +19,7 @@ $gray-light:             #777; // #777
 $gray-lighter:           #eee; // #eee
 
 $brand-primary:         #A22D38; // #337ab7
-$brand-success:         #5cb85c !default;
+$brand-success:         #4CAF50 !default;
 $brand-info:            #5bc0de !default;
 $brand-warning:         #f0ad4e !default;
 $brand-danger:          #d9534f !default;
@@ -161,7 +161,7 @@ $btn-primary-bg:                 $brand-primary !default;
 $btn-primary-border:             darken($btn-primary-bg, 5%) !default;
 
 $btn-success-color:              #fff !default;
-$btn-success-bg:                 $brand-success !default;
+$btn-success-bg:                 #4CAF50 !default;
 $btn-success-border:             darken($btn-success-bg, 5%) !default;
 
 $btn-info-color:                 #fff !default;
@@ -216,7 +216,7 @@ $input-height-large:             (ceil($font-size-large * $line-height-large) + 
 $input-height-small:             (floor($font-size-small * $line-height-small) + ($padding-small-vertical * 2) + 2) !default;
 
 //** `.form-group` margin
-$form-group-margin-bottom:       15px !default;
+$form-group-margin-bottom:  15px;
 
 $legend-color:                   $gray-dark !default;
 $legend-border-color:            #e5e5e5 !default;
@@ -583,7 +583,7 @@ $label-danger-bg:             $brand-danger !default;
 $label-color:                 #fff !default;
 //** Default text color of a linked label
 $label-link-hover-color:      #fff !default;
-
+$label-margin: 15px;
 
 //== Modals
 //
@@ -870,6 +870,8 @@ $hr-border:                   $gray-lighter !default;
 
 
 @import "bootstrap";
+
+
 
 // make all images responsive by default
 img {

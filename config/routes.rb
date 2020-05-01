@@ -25,6 +25,8 @@ Rails.application.routes.draw do
     end
   end
 
+ post 'subscriptions/menu', as: 'menu'
+ post 'subscriptions/list', as: 'list'
   resources :subscriptions  do
 
     collection do
@@ -32,15 +34,16 @@ Rails.application.routes.draw do
           get 'new_breakfast_dinner'
           get 'create_breakfast_dinner'
           get 'show_breakfast_dinner'
-          get 'show_menu'
           get 'bd'
-          get 'bld'
+          post 'bld'
           get 'create_customer'
+          get 'all'
+          get 'display_customers'
+          
          
-
+         
     end
-   end
-  
+ end
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

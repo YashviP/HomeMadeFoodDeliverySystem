@@ -1,0 +1,42 @@
+<% if @subscriptions.empty? %>
+		<h1 class="no_subscriptions"> You haven't created any Subscriptions Yet </h1>
+
+<% end %>
+
+<span class="your_subscription_tag"> Your Subscriptions </span>
+
+<% @subscriptions.reverse_each do |s| %>
+
+
+
+	
+
+
+	<div class="box">
+
+
+    	<h4><span class= "order" >  Subscription # 00<%= Time.zone.now.year %><%= s.id %> </span>
+    	</h4>
+  
+		<span class="date"> <h5><%= s.created_at %></h5> </span>
+
+		<br>
+		<br>
+
+		<div class="outer">
+			<div class="inner">
+			<%= button_to 'Menu',subscription_path(s), class: "btn btn-md btn-success" , method: :get  %>
+			</div>
+			<div class="inner">
+				<%= button_to 'Delete', subscription_path(s),
+			  	:class =>'btn btn-md btn-primary',
+             	 method: :delete %>
+			</div>
+		</div>
+	
+	
+		
+	</div>
+	
+<% end %>
+

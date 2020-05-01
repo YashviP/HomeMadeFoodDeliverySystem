@@ -1,11 +1,23 @@
 class SubscriptionsController < ApplicationController
 	before_action :authenticate_user!
+	
+
+
 	def index
 			p params[:search]
 			if params[:search]
 				@home_restarants=Chef.near(params[:search],5,units: :km)
 			
 			end
+	end
+
+	def all
+		@subscriptions=current_chef.subscription.all
+
+	end 
+
+	def display_customers
+		@customers=CustomerSubscription.joins(:subscription)
 	end
 
 	def new
@@ -31,29 +43,39 @@ class SubscriptionsController < ApplicationController
 
 	def show_breakfast_dinner
 		@subscription=current_chef.subscription.find(params[:id])
+
 	end
 
-    def show 
-		@subscription=current_chef.subscription.find(params[:id])
+    def list
+    	@menu=Subscription.find(params[:s_id])
+    end
+
+    def show
+    	begin
+      		@subscription=current_chef.subscription.find(params[:id])
+  		rescue ActiveRecord::RecordNotFound
+  				redirect_to  root_path
+  		end
+		
 	end
 
-	def show_menu
-		@chef=Chef.find(params[:chef_id])
-		@menu=@chef.subscription
+	def menu
+
+    			@chef=Chef.find(params[:chef_id])
+				@searched_subscriptions=@chef.subscription.all
+
 		
 	end
 
 
-	
-	
-
 	def bd
 		@subs=Subscription.find(params[:subs])
-
+		
 	end 
 
 	def bld
 		@subs=Subscription.find(params[:subs])
+		
 	end
 
 	def create
@@ -68,11 +90,21 @@ class SubscriptionsController < ApplicationController
 		end
 	end
     
+    def destroy 
+		@subscription=current_chef.subscription.find(params[:id])
+		if @subscription.destroy!
+			flash[:success] = ' entry deleted Successfully'
+			redirect_to all_subscriptions_path
+		else
+			 flash[:success] = 'Failed...'
+		end
+
+	end
 
 	
 	private def subscription_params
 		params.require(:subscription).permit(:is_breakfast_included,:is_lunch_included,:lunch_price,:total_price,
-			:is_dinner_included,:is_veg,:is_non_veg,
+			:is_dinner_included,:food_type,
 			lunch:[:monday ,:tuesday,:wednesday,:thursday,:friday,:saturday,:sunday],
 			breakfast:[:monday ,:tuesday,:wednesday,:thursday,:friday,:saturday,:sunday],
 			dinner:[:monday ,:tuesday,:wednesday,:thursday,:friday,:saturday,:sunday])

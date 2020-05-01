@@ -1,0 +1,42 @@
+<% if @searched_subscriptions.empty? %>
+		<h1 class="no_subscriptions"> No Subscriptions Yet!! </h1>
+
+<% end %>
+
+
+<% @searched_subscriptions.reverse_each do |s| %>
+
+
+
+	
+
+	<%= @searched_subscriptions %>
+	<div class="box">
+
+
+    	<h4><span class= "order" >  Subscription # 00<%= Time.zone.now.year %><%= s.id %> </span>
+    	</h4>
+  
+		<span class="date"> <h5><%= s.created_at %></h5> </span>
+
+
+
+		<br>
+		<br>
+		subs_id:<%= s.id %>
+		customer_id: <%= current_customer.id %>
+		<div class="outer">
+			<div class="inner">
+			<%= button_to 'Menu',list_path(:s_id=>s.id),  :method => :post  , class: "btn btn-md btn-success"  %>
+			</div>
+			<div class="inner">
+				<%= button_to 'Subscribe', subscribe_customer_subscriptions_path(subs_id: s.id, customer_id:  current_customer.id) ,  class: "btn btn-md btn-primary" %>
+			</div>
+		</div>
+	
+	
+		
+	</div>
+	
+<% end %>
+

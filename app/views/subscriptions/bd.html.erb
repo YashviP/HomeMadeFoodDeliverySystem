@@ -1,7 +1,7 @@
 <div>
 
 		<p><%= @subs.breakfast[:tuesday] %></p>
-	 	<%= button_to 'Subscribe', subscribe_customer_subscriptions_path(subs_id: @subs.id, customer_id: current_customer.id), method: :post %>
+	 	<%= button_to 'Subscribe', subscribe_customer_subscriptions_path(subs_id: @subs.id, customer_id: current_customer.id) %>
      	<td><%= link_to 'Back', root_path, :class =>'btn btn-primary' %></td>
  
 </div>

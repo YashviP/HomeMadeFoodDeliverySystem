@@ -1,10 +1,35 @@
 <div class="row">
   <div class="col-sm-4 col-sm-offset-4">
-    <h1>Edit <%= resource_name.to_s.humanize %></h1>
+    <h1 style="margin-left:60px;">Edit <%= resource_name.to_s.humanize %></h1>
     <hr>
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
       <%= devise_error_messages! %>
 
+
+      <div style="margin-left:60px;"> 
+        <% if customer_signed_in? %>
+          <% if current_customer.profile_image.attached? %>
+              <%= image_tag(current_customer.profile_image,:class=> "image_edit")%>
+      
+          <% else %>
+              <%= image_tag("https://p7.hiclipart.com/preview/749/84/910/chef-cooking-vector-chef-hat.jpg", size: "100x100",style: "float:left;margin:20px;border-radius: 100px;" ) %>
+          <% end %>
+        <% else %>
+          <% if current_chef.profile_image.attached? %>
+              <%= image_tag(current_chef.profile_image,:class=> "image_edit")%>
+      
+          <% else %>
+              <%= image_tag("https://p7.hiclipart.com/preview/749/84/910/chef-cooking-vector-chef-hat.jpg", size: "100x100",style: "float:left;margin:20px;border-radius: 100px;" ) %>
+          <% end %>
+
+        <% end %>
+      </div>
+       <h3 style="margin-left:65px;color:#8e2731; ">Edit profile Image<br></h3>
+      <div class="form-group", style="margin-left: 70px;">
+       
+       <%= f.file_field :profile_image %>
+      </div>
+ 
       <div class="form-group">
         <%= f.label :first_name %><br />
         <%= f.text_field :first_name, class: 'form-control'  %>
@@ -64,21 +89,21 @@
 
       <div class="form-group">
         <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
-        <%= f.password_field :password, autocomplete: "off", class: 'form-control'  %>
+        <%= f.password_field :password, autocomplete: "new-password", class: 'form-control' %>
       </div>
 
       <div class="form-group">
         <%= f.label :password_confirmation %><br />
-        <%= f.password_field :password_confirmation, autocomplete: "off", class: 'form-control'  %>
+       <%= f.password_field :password_confirmation, autocomplete: "new-password", class: 'form-control' %>
       </div>
 
       <div class="form-group">
         <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
-        <%= f.password_field :current_password, autocomplete: "off", class: 'form-control'  %>
+        <%= f.password_field :current_password, autocomplete: "current-password" , class: 'form-control'%>
       </div>
 
       <div class="form-group">
-        <%= f.submit "Update", class: 'btn btn-lg btn-block btn-primary' %>
+        <%= f.submit "Update", class: 'btn btn-sm btn-block btn-primary' %>
       </div>
     <% end %>
     <hr>

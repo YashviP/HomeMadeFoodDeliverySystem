@@ -27,21 +27,25 @@
         <li> <%= image_tag("homemade.png", :type => :upload, 
               :width => 150, :height => 90, :crop => :fill) %></li>
       </ul>
-   
       
-      
-      <ul class="nav navbar-nav navbar-left">
-  		  <li><%= link_to 'Profile', edit_chef_registration_path %></li>
-      </ul>
-
-      <ul class="nav navbar-nav navbar-left">
-  		  <li><%= link_to 'Logout', destroy_chef_session_path, :method=> :delete %><li>
-      </ul>
-      
-      <ul class="nav navbar-nav navbar-left">
+      <ul class="nav navbar-nav navbar-right">
         <li><%= link_to 'Create New Subscription', main_path %></li>
       </ul>
-      <ul class="nav navbar-nav navbar-left">
+      <ul class="nav navbar-nav navbar-right">
+        <li><%= link_to 'Subscriptions you created', all_subscriptions_path %></li>
+      </ul>
+
+      <ul class="nav navbar-nav navbar-right">
+        <li><%= link_to 'Your Customers', display_customers_subscriptions_path %></li>
+      </ul>
+       <ul class="nav navbar-nav navbar-right">
+        <li><%= link_to 'Logout', destroy_chef_session_path, :method=> :delete %><li>
+      </ul>
+       <ul class="nav navbar-nav navbar-right">
+        <li><%= link_to 'Profile', edit_chef_registration_path %></li>
+      </ul>
+
+      <ul class="nav navbar-nav navbar-right">
          <li><%= link_to 'Home', root_path, class: 'navbar-brand' %></li>
       </ul>
   	<% end %>
@@ -53,11 +57,7 @@
       :width => 150, :height => 250, :crop => :fill) %>
     </li>
   </ul>
-
-
- 
-
- 
+   
   <ul class="nav navbar-nav navbar-right">
     <li><%= link_to 'Customer Login', new_customer_session_path %></li>
   </ul>

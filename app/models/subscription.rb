@@ -5,4 +5,6 @@ class Subscription < ApplicationRecord
 	serialize :breakfast , Hash
 	serialize :dinner , Hash
 	
+
+
 end

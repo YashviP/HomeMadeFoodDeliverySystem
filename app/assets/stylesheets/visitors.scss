@@ -71,7 +71,7 @@ body {
 
 }
 
-.left-half {
+.left-half1 {
   
   position: absolute;
   left: 0px;
@@ -82,22 +82,33 @@ body {
   padding: 10px;
   color: black;
 }
+.left-half2{
+   
+  position: absolute;
+  left: 0px;
+  top: 20%;
+  height: 100%;
+  bottom: 0%;
+  width: 50%;
+  padding: 10px;
+  color: black;
+}
 
-.right-half {
+.right-half2 {
 
- 
+   background-image: url("https://homemadefood.app/wp-content/uploads/2019/06/1-1-1.png");
   background-repeat: no-repeat;
   background-position: center;
-   background-size: 300px,300px;
+   background-size: 500px,500px;
   position: absolute;
-  top: 10%;
-  height: 100%;
+  top: 0%;
   left: 50%;
-  right: 25%;
+  height: 100%;
+  right: 0px;
   bottom: 0%;
-  width: 25%;
+  width: 50%;
 }
-.right-half2 {
+.right-half1 {
 
   background-image: url("https://i.graphicmama.com/uploads/2019/3/5c98cbdd6241b-Italian%20Chef%20Cartoon%20Vector%20Character.png");
   background-repeat: no-repeat;

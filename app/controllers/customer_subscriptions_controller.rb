@@ -2,7 +2,10 @@ class CustomerSubscriptionsController < ApplicationController
  	before_action :authenticate_user!
 	def subscribe
 		@customer_subscription = CustomerSubscription.new(subscription_id: params[:subs_id], customer_id: params[:customer_id])
-		@customer_subscription.save!
+		if(@customer_subscription.save!)
+			flash[:info]="You are subscribed"
+			redirect_to  customer_subscriptions_path
+		end
  	end
 	
  	def index
@@ -17,5 +20,8 @@ class CustomerSubscriptionsController < ApplicationController
  	end
 
  
+ 
 
 end
+
+

@@ -41,3 +41,4 @@ gem "figaro"
 gem 'gmaps-autocomplete-rails'
 gem 'font-awesome-sass', '~> 5.12.0'
 gem 'time_diff'
+gem 'image_processing', '~> 1.2'

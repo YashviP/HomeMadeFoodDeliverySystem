@@ -10,14 +10,11 @@
 
       <div class="panel panel-default">
         <div class="panel-heading">Weekly Planner</div>
-  <%= form_for :subscription , url:subscriptions_path do |f| %>
+    <%= simple_form_for(@subscription, :url => subscriptions_path, :validate => true) do |f| %>
 
 
-      <% if @subscription.errors.any? %>
-      <% @subscription.errors.full_messages.each do |msg| %>
-      <div class="alert alert-danger"><%= msg%></div>
-      <% end %>
-      <% end %>
+      <%= f.error_notification %>
+   <%= f.input :food_type, as: :radio_buttons, collection: [['0', 'veg'], ['1', 'non_veg']], label_method: :second, value_method: :first , :item_wrapper_class => 'inline' %>
         <table class="table planner">
           <thead>
             <tr>
@@ -130,28 +127,27 @@
              <td> </td>
           </tr>
 
-          <tr>
-          <td><%= f.submit(:save , {:class => 'btn btn-primary'})%></td>
-          <td><%= link_to 'Back', root_path, :class =>'btn btn-primary' %></td>
-          <td> </td>
-          <%end%>
-
-           </tr>
 
 
 
           </tbody>
        </table>
+       <hr>
 
- 
+       <hr>
+          <td><%= f.submit(:save , {:class => 'btn btn-primary'})%></td>
+          <td><%= link_to 'Back', root_path, :class =>'btn btn-primary' %></td>
+     
+       <hr>
+     <%end%>  
        
   </div>
 </div>
 </div>
 </div>
              
-             
+           
          
- 			
+      
          
         

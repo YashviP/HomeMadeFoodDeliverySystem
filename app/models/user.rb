@@ -5,7 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :subscription , dependent: :destroy
-  
+  has_one_attached :profile_image
 
 
   number_regex = /\d[0-9]\)*\z/
@@ -16,8 +16,11 @@ class User < ApplicationRecord
   validates :last_name,presence: true,  format: { :with => /^[a-zA-Z]+$/ , message: "can only contain letters" , :multiline => true}
   validates :mobile_number,:presence => true,format: {:with => /^[^0-1][0-9]{9}$/ ,:multiline => true };
                  
-  validates :email, format: { with: URI::MailTo::EMAIL_REGEXP } 
-  validates :password, presence: true
-  validates :password, confirmation: { case_sensitive: true }
+  validates :email, presence: true ,format: { with: URI::MailTo::EMAIL_REGEXP } 
+  validates :address, presence: true
+  validates :city, presence: true
+  validates :state,presence: true
+  validates :country,presence: true
+  validates :pincode,presence: true
 
 end

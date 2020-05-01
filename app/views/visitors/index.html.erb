@@ -21,8 +21,9 @@
 </div>
 </body>
 <% elsif chef_signed_in? %>
-    <p><%= current_chef[:longitude]%></p>
-    <p><%= current_chef[:latitude] %></p>
+    
+    <%= render template: 'visitors/chef_home'%>
+   
 
 <% else %>
 

@@ -1,0 +1,40 @@
+<% if @customers.empty? %>
+		<h1 class="no_subscriptions"> You Don't have any Customers yet  </h1>
+<% end %>
+
+<span class="your_subscription_tag"> Your Customers </span>
+
+<% @customers.reverse_each do |c| %>
+	
+    <% active = false %>
+	<% if c.created_at > (Date.today).to_time - 7.days %>
+		<% active = true %>
+	<% end %>
+
+	<div class="box">
+
+    	 <h3><%=c.customer.first_name.slice(0,1).capitalize + c.customer.first_name.slice(1..-1) %> <%=c.customer.last_name %> 
+    		<% if active==true %>
+    			<span class= "ongoing" > Ongoing </span>
+    		<% else %>
+    			<span class="expired"> Expired </span>
+    		<% end %>
+
+    	</h3>
+ 
+		<h5><span class="date">Subscription Upto  <%= c.created_at+7.days %></h5> </span>
+		<hr>
+		<h5> Delivery Address:         <span class="details_"><%= c.customer.address %>,<%=c.customer.city%>,<%=c.customer.state %> ,<%= c.customer.pincode%> </span> </h5>
+	
+		<h5> Contact No: <span class="details_"><%= c.customer.mobile_number %> </span> </h5>
+
+
+		<h5> EmailId: <span class="details_"><%= c.customer.email %> </span> </h5>
+		<hr>
+
+
+		
+	</div>
+	
+<% end %>
+

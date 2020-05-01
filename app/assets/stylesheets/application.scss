@@ -16,12 +16,35 @@
 @import "font-awesome-sprockets";
 @import "font-awesome";
 
+
+.edit_container{
+
+   background-color: transparent;
+    
+   position: absolute;
+   left: 30%;
+   right: 30%;
+   padding-left: 5%;
+   padding-right: 5%;
+   padding-top: 2%;
+   padding-bottom: 2%;
+
+  
+   
+
+}
  .signup_container{
    background-color: white;
-   width: 70%;
-   height: 180%;
+   width: 40%;
+   height: 210%;
    position: absolute;
-   left: 15%;
+   left: 30%;
+   right: 30%;
+   padding-left: 5%;
+   padding-right: 5%;
+   padding-top: 2%;
+   padding-bottom: 2%;
+
   
    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
@@ -29,11 +52,24 @@
 .login_container{
 
   background-color: white;
-   width: 70%;
-   height: 70%;
+   width: 30%;
+   height: 65%;
    position: absolute;
-   left: 15%;
-   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+   padding: 20px;
+   left: 35%;
+   right: 35%;
+   top: 22.5%;
+   bottom: 22.5%;
+   padding-left: 5%;
+   padding-right: 5%;
+   padding-top: 2%;
+   padding-bottom: 2%;
+   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1), 0 5px 5px 0 rgba(0, 0, 0, 0.14);
 
 	
+}
+
+
+.image_edit{
+   width: 150px;height: 160px;float:center;margin:20px;border-radius:200px;box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1), 0 5px 5px 0 rgba(0, 0, 0, 0.14);
 }
