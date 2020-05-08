@@ -10,7 +10,7 @@
 
 	
 
-	<%= @searched_subscriptions %>
+	<% if s.active==true %>
 	<div class="box">
 
 
@@ -23,8 +23,7 @@
 
 		<br>
 		<br>
-		subs_id:<%= s.id %>
-		customer_id: <%= current_customer.id %>
+	
 		<div class="outer">
 			<div class="inner">
 			<%= button_to 'Menu',list_path(:s_id=>s.id),  :method => :post  , class: "btn btn-md btn-success"  %>
@@ -37,6 +36,7 @@
 	
 		
 	</div>
+	<% end %>
 	
 <% end %>
 

@@ -89,6 +89,8 @@ class SubscriptionsController < ApplicationController
 			render 'new'
 		end
 	end
+
+
     
     def destroy 
 		@subscription=current_chef.subscription.find(params[:id])
@@ -101,10 +103,21 @@ class SubscriptionsController < ApplicationController
 
 	end
 
+	def inactive
+  		@subscription= current_chef.subscription.find(params[:id])
+  		@subscription.update_attribute(:active, false)
+  		redirect_to all_subscriptions_path
+	end
+
+	def active
+  		@subscription= current_chef.subscription.find(params[:id])
+  		@subscription.update_attribute(:active, true)
+  		redirect_to all_subscriptions_path
+	end
 	
 	private def subscription_params
 		params.require(:subscription).permit(:is_breakfast_included,:is_lunch_included,:lunch_price,:total_price,
-			:is_dinner_included,:food_type,
+			:is_dinner_included,:food_type,:active,
 			lunch:[:monday ,:tuesday,:wednesday,:thursday,:friday,:saturday,:sunday],
 			breakfast:[:monday ,:tuesday,:wednesday,:thursday,:friday,:saturday,:sunday],
 			dinner:[:monday ,:tuesday,:wednesday,:thursday,:friday,:saturday,:sunday])

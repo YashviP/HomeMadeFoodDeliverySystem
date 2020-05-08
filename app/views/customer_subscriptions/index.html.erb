@@ -25,13 +25,13 @@
 
 	<div class="box">
 
-
-    	<h4><span class= "order" >  Subscription # 00<%= Time.zone.now.year %><%= cs.id %> </span>
+		<% @subs= Subscription.find(cs.subscription_id) %>
+		<% @chef= Chef.find(@subs.chef_id) %>
+    	<h4><span class= "order" >  Subscription # 00<%= Time.zone.now.year %><%= cs.subscription_id %> </span>
     	 <span class="days_left"> <%= days_left %> Days left </span>
     	</h4>
     	
-		<% @subs= Subscription.find(cs.subscription_id) %>
-		<% @chef= Chef.find(@subs.chef_id) %>
+
 		<h2> </h2>
 		<h2><%= @chef.first_name %>'s' Kitchen </h2>
 		<span class="date"> <h5><%= cs.created_at %></h5> </span>

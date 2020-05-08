@@ -29,6 +29,14 @@ Rails.application.routes.draw do
  post 'subscriptions/list', as: 'list'
   resources :subscriptions  do
 
+    patch :inactive, on: :member
+
+    patch :active, on: :member
+
+    member do
+        patch :toggle_enable_status
+    end
+
     collection do
 
           get 'new_breakfast_dinner'

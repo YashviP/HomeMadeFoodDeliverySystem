@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_26_093713) do
+ActiveRecord::Schema.define(version: 2020_05_03_043146) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -60,6 +60,7 @@ ActiveRecord::Schema.define(version: 2020_04_26_093713) do
     t.text "breakfast"
     t.boolean "food_type"
     t.text "attachments"
+    t.boolean "active"
     t.index ["users_id"], name: "index_subscriptions_on_users_id"
   end
 
@@ -93,6 +94,7 @@ ActiveRecord::Schema.define(version: 2020_04_26_093713) do
     t.string "locality"
     t.string "route"
     t.string "administrative_area_level_1"
+    t.boolean "availability"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

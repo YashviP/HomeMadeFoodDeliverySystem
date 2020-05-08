@@ -22,18 +22,36 @@
 
 		<br>
 		<br>
+		<% if  s.active==false %>
+			<div class="outer">
+			<div class="inner">
+			<%= button_to 'Menu',subscription_path(s), class: "btn btn-md btn-success" , method: :get  %>
+			</div>
+		
+			<div class="inner">
+				<%= button_to 'active', active_subscription_path(s),
+			  	:class =>'btn btn-md btn-success',
+             	 method: :patch %>
+			</div>
+		
+		</div>
+
+		<% else  %>
 
 		<div class="outer">
 			<div class="inner">
 			<%= button_to 'Menu',subscription_path(s), class: "btn btn-md btn-success" , method: :get  %>
 			</div>
+		
 			<div class="inner">
-				<%= button_to 'Delete', subscription_path(s),
+				<%= button_to 'Inactive', inactive_subscription_path(s),
 			  	:class =>'btn btn-md btn-primary',
-             	 method: :delete %>
+             	 method: :patch %>
 			</div>
+		
 		</div>
-	
+		
+		<% end %>
 	
 		
 	</div>
