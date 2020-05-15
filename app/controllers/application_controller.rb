@@ -6,9 +6,9 @@ class ApplicationController < ActionController::Base
 	devise_group :user, contains: [:customer, :chef]
 	before_action :configure_permitted_parameters, if: :devise_controller?
 	
- #unless Rails.application.config.consider_all_requests_local
-  # rescue_from ActionController::RoutingError, with: -> { render_404  }
-   # rescue_from ActiveRecord::RecordNotFound, with: -> { render_404  }
+  #unless Rails.application.config.consider_all_requests_local
+  #  rescue_from ActionController::RoutingError, with: -> { render_404  }
+  #  rescue_from ActiveRecord::RecordNotFound, with: -> { render_404  }
   #end
   Rails.application.config.paths["app/views"] << 'login_links'
   def render_404

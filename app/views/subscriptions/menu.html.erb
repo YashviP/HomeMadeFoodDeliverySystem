@@ -13,15 +13,31 @@
 	<% if s.active==true %>
 	<div class="box">
 
+		<% if s.lunch.empty? %>
+    		<h4>
+    		<span class= "order" >  Breakfast and Dinner Subscription 
+    		</span>
 
-    	<h4><span class= "order" >  Subscription # 00<%= Time.zone.now.year %><%= s.id %> </span>
-    	</h4>
+    		</h4>
+    		<% if s.food_type==1 %>
+    			<img class="non-veg-icon" src="https://img.icons8.com/color/20/000000/non-vegetarian-food-symbol.png"/> 
+    		<% else %>
+    			<img class="non-veg-icon" src="https://img.icons8.com/color/20/000000/vegetarian-food-symbol.png"/>
+    		<% end %>
+    		
+
+    	<% else %>
+			<h4><span class= "order" >  Breakfast Lunch and Dinner Subscription </span>
+    		</h4>
+    		<% if s.food_type==1 %>
+    			<img class="non-veg-icon" src="https://img.icons8.com/color/20/000000/non-vegetarian-food-symbol.png"/> 
+    		<% else %>
+    			<img class="non-veg-icon" src="https://img.icons8.com/color/20/000000/vegetarian-food-symbol.png"/> 
+    		<% end %>
+    	<% end %>
+
   
-		<span class="date"> <h5><%= s.created_at %></h5> </span>
-
-
-
-		<br>
+		<h4> ₹ <%=s.total_price %> <span class="date" >for 1 week subscription </span></h4>
 		<br>
 	
 		<div class="outer">

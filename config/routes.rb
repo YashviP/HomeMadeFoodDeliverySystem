@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   devise_for :chefs 
 
    
- # get '*path', to: 'errors#error_404', via: :all
+ #get '*path', to: 'errors#error_404', via: :all
 
   get 'subscriptions/main' , as: 'main'
 
