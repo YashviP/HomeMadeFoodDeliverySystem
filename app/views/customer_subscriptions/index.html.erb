@@ -42,7 +42,7 @@
 		<h3>
 	    	<span class="price" >₹ <%= @subs.total_price %></span><br><br>
 
-				<%= button_to 'Subscription Details',customer_subscription_path(cs), class: "btn btn-md btn-primary" , method: :get %>
+				<%= link_to 'Subscription Details',customer_subscription_path(cs), class: "btn btn-md btn-primary"  %>
 		
 		</h3>
 

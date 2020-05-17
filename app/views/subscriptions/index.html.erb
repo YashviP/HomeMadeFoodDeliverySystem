@@ -1,16 +1,14 @@
 <html>
-
-
 <% @home_restarants.each do |h| %>
-	<% @subscriptions=h.subscription.all %>
+
 
 	<div class="box"> 
 
 		<% if h.profile_image.attached? %>
-			<%= image_tag(h.profile_image, size: "150x150",style: "float:left;margin:20px" )%>
+			<%= image_tag(h.profile_image, size: "90x90",style: "float:left;margin:20px" )%>
 			
 		<% else %>
-			<%= image_tag("https://p7.hiclipart.com/preview/749/84/910/chef-cooking-vector-chef-hat.jpg", size: "100x100",style: "float:left;margin:20px" ) %><
+			<%= image_tag("https://p7.hiclipart.com/preview/749/84/910/chef-cooking-vector-chef-hat.jpg", size: "90x90",style: "float:left;margin:20px" ) %><
 		<% end %>
 
 		<h2 style="float: left"><%=h.first_name.slice(0,1).capitalize + h.first_name.slice(1..-1) %>'s Home Kitchen <br><span class="city"><span class="city"> <%=h.city.downcase%> </span></h2>
@@ -20,20 +18,19 @@
 	    <br>
 	    <br>
 	    <br>
-	    <br>
+	  
 	    <hr>
-	    <h4> <span class="address" > ADDRESS :  </span>     <%= h.address  %> <%= h.city %> <%= h.state %> <%= h.pincode %></h4>
-	    <h4> <span class="contact_no" > CONTACT NO. : </span>   <%= h.mobile_number %></h4>
-	    <h4> <span class="email_id" > EMAIL ID : </span>     <%= h.email %></h4>
+	    <h4> <span class="address" > ADDRESS :  </span> <%= h.address  %> <%= h.city %> <%= h.state %> <%= h.pincode %></h4>
+	    <h4> <span class="contact_no" > CONTACT NO. : </span> <%= h.mobile_number %></h4>
+	    <h4> <span class="email_id" > EMAIL ID : </span> <%= h.email %></h4>
 
 	    <hr>
-
-         
-		<%= link_to 'See the menu', menu_path(:chef_id => h.id) , :method => :post  ,:class =>'btn btn-md btn-primary' %>
+  		
+		<%= link_to 'See the menu', menu_subscriptions_path(h),:class =>'btn btn-md btn-primary'  %>
+		
 	</div>
 
 	
 
 <% end %>
 </html>
-

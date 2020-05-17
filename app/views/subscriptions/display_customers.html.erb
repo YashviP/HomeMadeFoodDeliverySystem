@@ -1,6 +1,7 @@
 <% if @customers.empty? %>
 		<h1 class="no_subscriptions"> You Don't have any Customers yet  </h1>
-<% end %>
+
+<% else %>
 
 <span class="your_subscription_tag"> Your Customers </span>
 
@@ -13,7 +14,7 @@
 
 	<div class="box">
 
-    	 <h3><%=c.customer.first_name.slice(0,1).capitalize + c.customer.first_name.slice(1..-1) %> <%=c.customer.last_name %> 
+    	<h3><%=c.customer.first_name.slice(0,1).capitalize + c.customer.first_name.slice(1..-1) %> <%=c.customer.last_name %> 
     		<% if active==true %>
     			<span class= "ongoing" > Ongoing </span>
     		<% else %>
@@ -30,11 +31,8 @@
 
 
 		<h5> EmailId: <span class="details_"><%= c.customer.email %> </span> </h5>
-		<hr>
-
-
-		
-	</div>
-	
+		<hr>	
+	</div>	
+<% end %>
 <% end %>
 

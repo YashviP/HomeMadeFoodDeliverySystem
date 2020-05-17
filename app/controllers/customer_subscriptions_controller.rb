@@ -19,9 +19,6 @@ class CustomerSubscriptionsController < ApplicationController
  		@chef=Chef.find(@subscription.chef_id)
  	end
 
- 
- 
-
 end
 
 

@@ -3,14 +3,8 @@
 
 <% end %>
 
-
 <% @searched_subscriptions.reverse_each do |s| %>
-
-
-
-	
-
-	<% if s.active==true %>
+	<% if s.active!=false%>
 	<div class="box">
 
 		<% if s.lunch.empty? %>
@@ -24,7 +18,6 @@
     		<% else %>
     			<img class="non-veg-icon" src="https://img.icons8.com/color/20/000000/vegetarian-food-symbol.png"/>
     		<% end %>
-    		
 
     	<% else %>
 			<h4><span class= "order" >  Breakfast Lunch and Dinner Subscription </span>
@@ -42,17 +35,13 @@
 	
 		<div class="outer">
 			<div class="inner">
-			<%= button_to 'Menu',list_path(:s_id=>s.id),  :method => :post  , class: "btn btn-md btn-success"  %>
+			<%= button_to 'Menu',list_subscriptions_path(s),  :method => :post  , class: "btn btn-md btn-success"  %>
 			</div>
 			<div class="inner">
 				<%= button_to 'Subscribe', subscribe_customer_subscriptions_path(subs_id: s.id, customer_id:  current_customer.id) ,  class: "btn btn-md btn-primary" %>
 			</div>
-		</div>
-	
-	
-		
+		</div>		
 	</div>
 	<% end %>
 	
 <% end %>
-

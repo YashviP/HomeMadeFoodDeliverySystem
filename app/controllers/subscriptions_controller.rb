@@ -1,23 +1,18 @@
 class SubscriptionsController < ApplicationController
 	before_action :authenticate_user!
 	
-
-
-	def index
-			p params[:search]
-			if params[:search]
-				@home_restarants=Chef.near(params[:search],5,units: :km)
-			
-			end
+	def index		
+		if params[:search]
+			@home_restarants=Chef.near(params[:search],5,units: :km)	
+		end
 	end
 
 	def all
 		@subscriptions=current_chef.subscription.all
-
 	end 
 
-	def display_customers
-		@customers=CustomerSubscription.joins(:subscription)
+	def display_customers		
+		@customers=CustomerSubscription.joins(:subscription).where(:subscriptions => {:chef_id => current_chef.id})
 	end
 
 	def new
@@ -26,7 +21,6 @@ class SubscriptionsController < ApplicationController
 
 	def new_breakfast_dinner
 		@subscription=current_chef.subscription.new 
-
     end
 
     def create_breakfast_dinner
@@ -40,14 +34,8 @@ class SubscriptionsController < ApplicationController
 	end
 
 
-
-	def show_breakfast_dinner
-		@subscription=current_chef.subscription.find(params[:id])
-
-	end
-
     def list
-    	@menu=Subscription.find(params[:s_id])
+    	@menu=Subscription.find(params[:id])
     end
 
     def show
@@ -60,22 +48,10 @@ class SubscriptionsController < ApplicationController
 	end
 
 	def menu
-
-    			@chef=Chef.find(params[:chef_id])
+		
+    			@chef=Chef.find(params[:id])
 				@searched_subscriptions=@chef.subscription.all
 
-		
-	end
-
-
-	def bd
-		@subs=Subscription.find(params[:subs])
-		
-	end 
-
-	def bld
-		@subs=Subscription.find(params[:subs])
-		
 	end
 
 	def create
@@ -89,8 +65,6 @@ class SubscriptionsController < ApplicationController
 			render 'new'
 		end
 	end
-
-
     
     def destroy 
 		@subscription=current_chef.subscription.find(params[:id])

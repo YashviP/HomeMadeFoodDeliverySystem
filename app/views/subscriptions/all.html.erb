@@ -6,12 +6,6 @@
 <span class="your_subscription_tag"> Your Subscriptions </span>
 
 <% @subscriptions.reverse_each do |s| %>
-
-
-
-	
-
-
 	<div class="box">
 
 
@@ -25,7 +19,7 @@
 		<% if  s.active==false %>
 			<div class="outer">
 			<div class="inner">
-			<%= button_to 'Menu',subscription_path(s), class: "btn btn-md btn-success" , method: :get  %>
+			<%= link_to 'Menu',subscription_path(s), class: "btn btn-md btn-success" %>
 			</div>
 		
 			<div class="inner">
@@ -40,7 +34,7 @@
 
 		<div class="outer">
 			<div class="inner">
-			<%= button_to 'Menu',subscription_path(s), class: "btn btn-md btn-success" , method: :get  %>
+			<%= link_to 'Menu',subscription_path(s), class: "btn btn-md btn-success"  %>
 			</div>
 		
 			<div class="inner">
