@@ -1,5 +1,5 @@
 class CustomerSubscriptionsController < ApplicationController
- 	before_action :authenticate_user!
+	before_action :authenticate_user!
 	def subscribe
 		@customer_subscription = CustomerSubscription.new(subscription_id: params[:subs_id], customer_id: params[:customer_id])
 		if(@customer_subscription.save!)

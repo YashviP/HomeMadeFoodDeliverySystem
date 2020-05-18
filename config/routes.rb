@@ -1,5 +1,11 @@
+require 'sidekiq/web'
 Rails.application.routes.draw do
+  
+  mount Notifications::Engine => "/notifications"
+  get 'notifications/index'
   default_url_options :host => "127.0.0.1:3000"
+
+
 
   devise_for :users 
   devise_for :customers 
@@ -51,9 +57,15 @@ Rails.application.routes.draw do
          
          
     end
- end
+  end
 
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
+  mount ActionCable.server => '/cable'
+  mount Sidekiq::Web => '/sidekiq'
+
+  resources :notifications, only: [:index, :update]
+
+ 
 end
 
  

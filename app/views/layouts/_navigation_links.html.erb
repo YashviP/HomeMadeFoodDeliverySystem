@@ -22,33 +22,41 @@
          <li><%= link_to 'Home', root_path %></li> 
       </ul>
 
+     
 	<% elsif chef_signed_in? %>
+ 
       <ul class="nav navbar-nav navbar-left" href="#">
         <li> <%= image_tag("homemade.png", :type => :upload, 
               :width => 150, :height => 90, :crop => :fill) %></li>
       </ul>
+
+    <ul class="nav navbar-nav navbar-right" href="#">
+      <li> <%= link_to pluralize(Notification.unread_count(current_user),'Notifications'),notifications_path %> </li>
+    </ul>
+
       
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to 'Create New Subscription', main_path %></li>
+        <li><%= link_to 'Create New Subscription', main_app.main_path %></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to 'Subscriptions you created', all_subscriptions_path %></li>
+        <li><%= link_to 'Subscriptions you created', main_app.all_subscriptions_path %></li>
       </ul>
 
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to 'Your Customers', display_customers_subscriptions_path %></li>
+        <li><%= link_to 'Your Customers', main_app.display_customers_subscriptions_path %></li>
       </ul>
        <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to 'Logout', destroy_chef_session_path, :method=> :delete %><li>
+        <li><%= link_to 'Logout', main_app.destroy_chef_session_path, :method=> :delete %><li>
       </ul>
        <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to 'Profile', edit_chef_registration_path %></li>
+        <li><%= link_to 'Profile', main_app.edit_chef_registration_path %></li>
       </ul>
 
       <ul class="nav navbar-nav navbar-right">
-         <li><%= link_to 'Home', root_path, class: 'navbar-brand' %></li>
+         <li><%= link_to 'Home', main_app.root_path, class: 'navbar-brand' %></li>
       </ul>
   	<% end %>
+
 
 <% else %>
 
@@ -75,5 +83,5 @@
   </ul>
 
 <% end %>
-<!--   <li><%= link_to ('<i class="fas fa-home", aria-hidden="true"></i>').html_safe, root_path, class: 'navbar-brand'%></li> -->
+
 

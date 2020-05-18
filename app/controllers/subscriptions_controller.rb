@@ -2,8 +2,13 @@ class SubscriptionsController < ApplicationController
 	before_action :authenticate_user!
 	
 	def index		
-		if params[:search]
-			@home_restarants=Chef.near(params[:search],5,units: :km)	
+		begin params[:search]
+
+			@home_restarants=Chef.near(params[:search],5,units: :km)
+
+		rescue 
+			flash[:error]="Please Enter Valid delivery location or area "
+			redirect_to root_path	
 		end
 	end
 

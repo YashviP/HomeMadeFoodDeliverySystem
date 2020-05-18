@@ -23,4 +23,11 @@ class User < ApplicationRecord
   validates :country,presence: true
   validates :pincode,presence: true
 
+  def unviewed_notifications_count
+    Notification.for_user(self.id)
+  end
+
+  
+  has_many :notification, dependent: :destroy
+
 end

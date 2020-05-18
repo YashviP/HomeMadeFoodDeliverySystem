@@ -1,7 +1,6 @@
 class Customer < User
 
     has_many :customer_subscription
-	  geocoded_by :city
     has_one_attached :profile_image
     after_validation :geocode
 
@@ -19,5 +18,6 @@ class Customer < User
     validates :state,presence: true
     validates :country,presence: true
     validates :pincode,presence: true
+
   
 end

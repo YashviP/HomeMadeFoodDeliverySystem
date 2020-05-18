@@ -21,4 +21,10 @@ class Chef < User
   validates :state,presence: true
   validates :country,presence: true
   validates :pincode,presence: true
+
+
+  def unviewed_notifications_count
+    Notification.for_chef(self.id)
+  end
+
 end
