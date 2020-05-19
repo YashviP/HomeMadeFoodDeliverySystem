@@ -18,6 +18,7 @@ class Customer < User
     validates :state,presence: true
     validates :country,presence: true
     validates :pincode,presence: true
+    validates :password, presence: true, on: :create
 
   
 end

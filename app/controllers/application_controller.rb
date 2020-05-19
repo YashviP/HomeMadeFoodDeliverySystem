@@ -2,22 +2,20 @@ class ApplicationController < ActionController::Base
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
 
+  protect_from_forgery with: :exception
+  devise_group :user, contains: [:customer, :chef]
+  before_action :configure_permitted_parameters, if: :devise_controller? 
+
+  rescue_from ActiveRecord::RecordNotFound, with: :not_found
 
   
-  protect_from_forgery with: :exception
-	devise_group :user, contains: [:customer, :chef]
-	before_action :configure_permitted_parameters, if: :devise_controller?
-	
-  #unless Rails.application.config.consider_all_requests_local
-  #  rescue_from ActionController::RoutingError, with: -> { render_404  }
-  #  rescue_from ActiveRecord::RecordNotFound, with: -> { render_404  }
-  #end
+
   Rails.application.config.paths["app/views"] << 'login_links'
-  def render_404
-    respond_to do |format|
-      format.html { render template: 'errors/not_found', status: 404 }
-      format.all { render nothing: true, status: 404 }
-    end
+
+  private
+  
+  def not_found
+    render file: 'public/404.html', status: 404
   end
  
   protected

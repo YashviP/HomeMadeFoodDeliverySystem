@@ -4,6 +4,8 @@ class CustomerSubscription < ApplicationRecord
 
 	after_commit :create_notifications, on: :create
 
+	scope :recents, -> { where("DATE(created_at) <= ?", (Date.today).to_time - 7.days).update_all(expired: true) }
+	
 	private 
 
 	def create_notifications

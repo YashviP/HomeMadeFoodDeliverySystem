@@ -7,48 +7,26 @@
 
 <% @customer_subscriptions.reverse_each do |cs| %>
 
-
-	<% days_left=0 %>
- 	<% time=Time.diff(cs.created_at , DateTime.current) %>
-	<% if (time[:year].to_i==0  and time[:month]==0 and time[:month]==0 and time[:week]==0 and time[:day]<=6 ) or (time[:year].to_i==0  and time[:month]==0 and time[:month]==0 and time[:week]==1 and time[:day]==0) %>
-			<% status="Ongoing" %>
-			<% if time[:week]==0 and time[:day]<=6 %>
-				<% days_left=7-time[:day] %>
-			<% end %>
-	<% else %> 
-
-			<% status="Expired" %>
-			
-	<% end %>
-
-
-
 	<div class="box">
 
-		<% @subs= Subscription.find(cs.subscription_id) %>
-		<% @chef= Chef.find(@subs.chef_id) %>
     	<h4><span class= "order" >  Subscription # 00<%= Time.zone.now.year %><%= cs.subscription_id %> </span>
-    	 <span class="days_left"> <%= days_left %> Days left </span>
+    	<span class="days_left"> <%= calculate_days_left(cs) %> Days left </span>
     	</h4>
     	
 
 		<h2> </h2>
-		<h2><%= @chef.first_name %>'s' Kitchen </h2>
+		<h2><%=cs.subscription.chef.first_name %>'s' Kitchen </h2>
 		<span class="date"> <h5><%= cs.created_at %></h5> </span>
 
 		<h1> </h1>
 		<h1> </h1>
 
 		<h3>
-	    	<span class="price" >₹ <%= @subs.total_price %></span><br><br>
+	    	<span class="price" >₹ <%= cs.subscription.total_price %></span><br><br>
 
 				<%= link_to 'Subscription Details',customer_subscription_path(cs), class: "btn btn-md btn-primary"  %>
 		
 		</h3>
-
-	
-	
-		
 	</div>
 	<br><br>
 <% end %>

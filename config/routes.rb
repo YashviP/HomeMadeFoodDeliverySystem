@@ -12,8 +12,6 @@ Rails.application.routes.draw do
 
   devise_for :chefs 
 
-   
- #get '*path', to: 'errors#error_404', via: :all
 
   get 'subscriptions/main' , as: 'main'
 
@@ -52,7 +50,7 @@ Rails.application.routes.draw do
           get 'all'
           get 'display_customers'
           get 'menu/:id', to: 'subscriptions#menu', as: 'menu'
-          post 'list/:id', to: 'subscriptions#list', as: 'list'
+          get 'list/:id', to: 'subscriptions#list', as: 'list'
           
          
          
