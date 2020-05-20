@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_18_105624) do
+ActiveRecord::Schema.define(version: 2020_05_20_102648) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -39,8 +39,10 @@ ActiveRecord::Schema.define(version: 2020_05_18_105624) do
     t.integer "customer_id"
     t.integer "subscription_id"
     t.boolean "expired", default: false
+    t.integer "user_id"
     t.index ["customer_id"], name: "index_customer_subscriptions_on_customer_id"
     t.index ["subscription_id"], name: "index_customer_subscriptions_on_subscription_id"
+    t.index ["user_id"], name: "index_customer_subscriptions_on_user_id"
   end
 
   create_table "notifications", force: :cascade do |t|
@@ -79,6 +81,8 @@ ActiveRecord::Schema.define(version: 2020_05_18_105624) do
     t.boolean "food_type"
     t.text "attachments"
     t.boolean "active"
+    t.integer "user_id"
+    t.index ["user_id"], name: "index_subscriptions_on_user_id"
     t.index ["users_id"], name: "index_subscriptions_on_users_id"
   end
 

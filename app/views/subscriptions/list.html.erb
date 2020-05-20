@@ -38,7 +38,7 @@
 			<%= link_to 'Menu',menu_subscriptions_path(s) , class: "btn btn-md btn-success"  %>
 			</div>
 			<div class="inner">
-				<%= button_to 'Subscribe', subscribe_customer_subscriptions_path(subs_id: s.id, customer_id:  current_customer.id) ,  class: "btn btn-md btn-primary" %>
+				<%= button_to 'Subscribe', subscribe_customer_subscriptions_path(subs_id: s.id, user_id:  current_user.id) ,  class: "btn btn-md btn-primary" %>
 			</div>
 		</div>		
 	</div>

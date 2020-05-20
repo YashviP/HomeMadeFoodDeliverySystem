@@ -1,30 +1,30 @@
 
 <% if user_signed_in? %>
-  <% if customer_signed_in? %>
+     
+    <%if current_user.is_chef == false %>
+ 
       <ul class="nav navbar-nav navbar-left" href="#">
         <li> <%= image_tag("homemade.png", :type => :upload, 
               :width => 150, :height => 90, :crop => :fill) %></li>
       </ul>
    
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "Your Subscriptions " , customer_subscriptions_path %></li>
+        <li><%= link_to "Your Subscriptions " ,customer_subscriptions_path %></li>
       </ul>
 
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to 'Logout', destroy_customer_session_path, :method=> :delete %><li>
+        <li><%= link_to 'Logout', destroy_user_session_path, :method=> :delete %><li>
       </ul>
 
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to 'Profile', edit_customer_registration_path %></li>
+        <li><%= link_to 'Profile', edit_user_registration_path %></li>
       </ul>
       
       <ul class="nav navbar-nav navbar-right">
          <li><%= link_to 'Home', root_path %></li> 
       </ul>
 
-     
-	<% elsif chef_signed_in? %>
- 
+    <% else %>
       <ul class="nav navbar-nav navbar-left" href="#">
         <li> <%= image_tag("homemade.png", :type => :upload, 
               :width => 150, :height => 90, :crop => :fill) %></li>
@@ -46,16 +46,18 @@
         <li><%= link_to 'Your Customers', main_app.display_customers_subscriptions_path %></li>
       </ul>
        <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to 'Logout', main_app.destroy_chef_session_path, :method=> :delete %><li>
+        <li><%= link_to 'Logout', main_app.destroy_user_session_path, :method=> :delete %><li>
       </ul>
        <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to 'Profile', main_app.edit_chef_registration_path %></li>
+        <li><%= link_to 'Profile', main_app.edit_user_registration_path %></li>
       </ul>
 
       <ul class="nav navbar-nav navbar-right">
          <li><%= link_to 'Home', main_app.root_path, class: 'navbar-brand' %></li>
       </ul>
-  	<% end %>
+    <% end %>
+
+
 
 
 <% else %>
@@ -67,17 +69,13 @@
   </ul>
    
   <ul class="nav navbar-nav navbar-right">
-    <li><%= link_to 'Customer Login', new_customer_session_path %></li>
+    <li><%= link_to 'Signup', new_user_registration_path %></li>
   </ul>
   <ul class="nav navbar-nav navbar-right">
-    <li><%= link_to 'Customer Signup', new_customer_registration_path ,method: :get %></li>
-  </ul>
-  <ul class="nav navbar-nav navbar-right">
-    <li><%= link_to 'Chef Login',new_chef_session_path %></li>
+    <li><%= link_to 'Login',new_user_session_path %></li>
   </ul> 
-  <ul class="nav navbar-nav navbar-right">
-    <li><%= link_to 'Chef Signup',new_chef_registration_path ,method: :get %></li>
-  </ul>
+ 
+
   <ul class="nav navbar-nav navbar-right">
     <li><%= link_to 'Home', root_path %></li>
   </ul>

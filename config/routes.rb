@@ -1,5 +1,5 @@
-require 'sidekiq/web'
-Rails.application.routes.draw do
+  require 'sidekiq/web'
+  Rails.application.routes.draw do
   
   mount Notifications::Engine => "/notifications"
   get 'notifications/index'
@@ -8,9 +8,7 @@ Rails.application.routes.draw do
 
 
   devise_for :users 
-  devise_for :customers 
-
-  devise_for :chefs 
+ 
 
 
   get 'subscriptions/main' , as: 'main'
@@ -62,7 +60,7 @@ Rails.application.routes.draw do
   mount Sidekiq::Web => '/sidekiq'
 
   resources :notifications, only: [:index, :update]
-
+  match '*path', to: "application#render_404", via: :all, constraints: lambda {|req| req.path.exclude? 'rails/active_storage'}
  
 end
 

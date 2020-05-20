@@ -1,5 +1,5 @@
 class Subscription < ApplicationRecord
-	belongs_to :chef , :class_name => 'Chef', :foreign_key => 'chef_id'
+	belongs_to :user, :class_name => 'User', :foreign_key => 'user_id'
 	belongs_to :customer_subscription
 	belongs_to :user
 	serialize :lunch , Hash

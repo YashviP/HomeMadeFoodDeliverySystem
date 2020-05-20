@@ -874,13 +874,23 @@ $hr-border:                   $gray-lighter !default;
 
 
 // make all images responsive by default
+.navbar-nav > li > a {
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+    line-height: 20px;
+    font-size: 18px;
+
+
+}
 img {
   @extend .img-responsive;
   margin: 0 auto;
   }
 // override for the 'Home' navigation link
 .navbar-brand {
-  font-size: inherit;
+  font-size: 18px;
+  font-family: arial, sans-serif;
   }
 
 // THESE ARE EXAMPLES YOU CAN MODIFY

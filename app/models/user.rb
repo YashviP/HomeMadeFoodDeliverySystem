@@ -3,6 +3,7 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
+  
 
   has_many :subscription , dependent: :destroy
   has_one_attached :profile_image
@@ -27,5 +28,6 @@ class User < ApplicationRecord
 
   
   has_many :notification, dependent: :destroy
+
 
 end

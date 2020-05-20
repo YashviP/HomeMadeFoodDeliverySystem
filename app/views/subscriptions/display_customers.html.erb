@@ -11,7 +11,7 @@
 
 	<div class="box">
 
-    	<h3><%=c.customer.first_name.slice(0,1).capitalize + c.customer.first_name.slice(1..-1) %> <%=c.customer.last_name %> 
+    	<h3><%=c.user.first_name.slice(0,1).capitalize + c.user.first_name.slice(1..-1) %> <%=c.user.last_name %> 
     		<% if c.expired == false %>
     			<span class= "ongoing" > Ongoing </span>
     		<% else %>
@@ -22,12 +22,12 @@
  
 		<h5><span class="date">Subscription Upto  <%= c.created_at+7.days %></h5> </span>
 		<hr>
-		<h5> Delivery Address:         <span class="details_"><%= c.customer.address %>,<%=c.customer.city%>,<%=c.customer.state %> ,<%= c.customer.pincode%> </span> </h5>
+		<h5> Delivery Address:         <span class="details_"><%= c.user.address %>,<%=c.user.city%>,<%=c.user.state %> ,<%= c.user.pincode%> </span> </h5>
 	
-		<h5> Contact No: <span class="details_"><%= c.customer.mobile_number %> </span> </h5>
+		<h5> Contact No: <span class="details_"><%= c.user.mobile_number %> </span> </h5>
 
 
-		<h5> EmailId: <span class="details_"><%= c.customer.email %> </span> </h5>
+		<h5> EmailId: <span class="details_"><%= c.user.email %> </span> </h5>
 		<hr>	
 	</div>	
 <% end %>

@@ -3,35 +3,37 @@
 <head>
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=places&key=<%= Rails.application.credentials[:google_maps_api_key]%>"></script>
 </head>
+
 <body class="customer-index">
-<% if customer_signed_in? %>
+<% if user_signed_in? %>
+ 
+    <% if current_user.is_chef == false %>
 
+        <div class="search-wrapper">
+            <div class="home-made-heading">
+                <h1>
+                    Fresh. Delicious. Homemade
+                <span>Food Delivered</span>
+                </h1>
+            </div>
+            <%= form_for "",url: subscriptions_path, method: :get,:class=> "form-inline d-flex justify-content-center md-form form-sm" do %>
+    	   <%= text_field_tag :search,@search_term,placeholder:'Type your delivery location or area...'%>
+           <p class="happy">HAPPINESS IS HOMEMADE</p>
+           <% end %>
+        </div>
+    <% else %>
+        <%= render template: 'visitors/chef_home' %>
 
-<div class="search-wrapper">
-    <div class="home-made-heading">
-    <h1>
-        Fresh. Delicious. Homemade
-        <span>Food Delivered</span>
-    </h1>
-</div>
-    <%= form_for "",url: subscriptions_path, method: :get,:class=> "form-inline d-flex justify-content-center md-form form-sm" do %>
-    	<%= text_field_tag :search,@search_term,placeholder:'Type your delivery location or area...'%>
     <% end %>
-    <p class="happy">HAPPINESS IS HOMEMADE</p>
-</div>
-</body>
-<% elsif chef_signed_in? %>
-    
-    <%= render template: 'visitors/chef_home'%>
-   
 
 <% else %>
+    
+     <%= render template: 'visitors/home' %>
 
+<% end %>
+   
 
-	<%= render template: 'visitors/home'%>
-<%end%>
-
-
+ </body>
 
 <!--
 <script>
@@ -46,9 +48,9 @@
         
     });
 </script>
-
-</html>
 -->
+</html>
+
 <script>
   var placesAutocomplete = places({
     appId: "plSCCF6JX22J",

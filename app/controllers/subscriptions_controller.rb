@@ -1,9 +1,27 @@
 class SubscriptionsController < ApplicationController
+	
+
+
 	before_action :authenticate_user!
+	before_action :check_role, only: [:main,:new, :create,:display_customers],if: :user_is_customer
+	before_action :check_role, only: [:index,:list,:menu],if: :user_is_chef
+
+	def user_is_customer
+		user_signed_in? and current_user.is_chef== false
+	end
+	def user_is_chef
+		user_signed_in? and current_user.is_chef== true
+	end
+
+	def check_role
+    	render file: 'public/404.html', status: 404 
+  	end
+
+
 	
 	def index		
 		begin params[:search]
-			@home_restarants=Chef.near(params[:search],5,units: :km)
+			@home_restarants=User.near(params[:search],5,units: :km).where(:is_chef => true)
 		rescue 
 			flash[:error]="Please Enter Valid delivery location or area "
 			redirect_to root_path	
@@ -11,24 +29,26 @@ class SubscriptionsController < ApplicationController
 	end
 
 	def all
-		@subscriptions=current_chef.subscription.all
+		@subscriptions=current_user.subscription.all
 	end 
 
 	def display_customers		
-		@customers=CustomerSubscription.joins(:subscription).where(:subscriptions => {:chef_id => current_chef.id})
+		@customers=CustomerSubscription.joins(:subscription).where(:subscriptions => {:user_id => current_user.id})
 	end
 
 	def new
-		@subscription = current_chef.subscription.new      
+		@subscription = current_user.subscription.new   
+		 
 	end
 
 	def new_breakfast_dinner
-		@subscription=current_chef.subscription.new 
+		@subscription=current_user.subscription.new 
+		
     end
 
     def create_breakfast_dinner
-		@subscription=current_chef.subscription.new(subscription_params)
-			
+		@subscription=current_user.subscription.new(subscription_params)
+		
 		if(@subscription.save)
 			redirect_to @subscription
 		else
@@ -41,17 +61,18 @@ class SubscriptionsController < ApplicationController
     end
 
     def show
-  		@subscription=current_chef.subscription.find(params[:id]) or not_found
+  		@subscription=current_user.subscription.find(params[:id]) or not_found
   		
 	end
 
 	def list
-		@chef=Chef.find(params[:id])
+		@chef=User.find(params[:id])
 		@searched_subscriptions=@chef.subscription.all
 	end
 
 	def create
-		@subscription=current_chef.subscription.new(subscription_params)		
+		@subscription=current_user.subscription.new(subscription_params)		
+		
 		if(@subscription.save)
 			redirect_to @subscription
 		else	
@@ -60,7 +81,7 @@ class SubscriptionsController < ApplicationController
 	end
     
     def destroy 
-		@subscription=current_chef.subscription.find(params[:id]) or not_found
+		@subscription=current_user.subscription.find(params[:id]) or not_found
 		if @subscription.destroy!
 			flash[:success] = ' entry deleted Successfully'
 			redirect_to all_subscriptions_path
@@ -70,13 +91,13 @@ class SubscriptionsController < ApplicationController
 	end
 
 	def inactive
-  		@subscription= current_chef.subscription.find(params[:id]) or not_found
+  		@subscription= current_user.subscription.find(params[:id]) or not_found
   		@subscription.update_attribute(:active, false)
   		redirect_to all_subscriptions_path
 	end
 
 	def active
-  		@subscription= current_chef.subscription.find(params[:id]) or not_found
+  		@subscription= current_user.subscription.find(params[:id]) or not_found
   		@subscription.update_attribute(:active, true)
   		redirect_to all_subscriptions_path
 	end
