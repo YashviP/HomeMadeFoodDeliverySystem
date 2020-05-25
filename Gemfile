@@ -6,26 +6,25 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails'
 gem 'jquery-rails'
 gem 'jbuilder', '~> 2.0'
+gem 'sqlite3', '~> 1.4.2'
 gem 'railties', '~>6.0.2.2'
 
+group :production do
+  gem 'pg', '0.15.1'
+end
+
+group :test do
+  gem 'sqlite3', '1.3.6'
+end
 group :development do
+
+  gem 'sqlite3', '1.3.6'
   gem 'web-console'
   gem 'listen', '~> 3.0.5'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'better_errors'
   gem 'rails_layout'
-end
-
-group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'sqlite3', '1.4.1'
-  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-end
-
-
-group :production do
-  gem 'pg', '1.1.4'
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
