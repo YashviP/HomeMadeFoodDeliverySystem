@@ -1,0 +1,12 @@
+W, [2020-05-25T18:57:18.236987 #3519]  WARN -- : Creating scope :with_attached_profile_image. Overwriting existing method Chef.with_attached_profile_image.
+W, [2020-05-25T18:57:18.237651 #3519]  WARN -- : Creating scope :geocoded. Overwriting existing method Chef.geocoded.
+W, [2020-05-25T18:57:18.237886 #3519]  WARN -- : Creating scope :not_geocoded. Overwriting existing method Chef.not_geocoded.
+W, [2020-05-25T18:57:18.238092 #3519]  WARN -- : Creating scope :not_reverse_geocoded. Overwriting existing method Chef.not_reverse_geocoded.
+W, [2020-05-25T18:57:18.238288 #3519]  WARN -- : Creating scope :near. Overwriting existing method Chef.near.
+W, [2020-05-25T18:57:18.238478 #3519]  WARN -- : Creating scope :within_bounding_box. Overwriting existing method Chef.within_bounding_box.
+W, [2020-05-25T18:57:18.254511 #3519]  WARN -- : Creating scope :with_attached_profile_image. Overwriting existing method Customer.with_attached_profile_image.
+W, [2020-05-25T18:57:18.255187 #3519]  WARN -- : Creating scope :geocoded. Overwriting existing method Customer.geocoded.
+W, [2020-05-25T18:57:18.255436 #3519]  WARN -- : Creating scope :not_geocoded. Overwriting existing method Customer.not_geocoded.
+W, [2020-05-25T18:57:18.255640 #3519]  WARN -- : Creating scope :not_reverse_geocoded. Overwriting existing method Customer.not_reverse_geocoded.
+W, [2020-05-25T18:57:18.255833 #3519]  WARN -- : Creating scope :near. Overwriting existing method Customer.near.
+W, [2020-05-25T18:57:18.256017 #3519]  WARN -- : Creating scope :within_bounding_box. Overwriting existing method Customer.within_bounding_box.

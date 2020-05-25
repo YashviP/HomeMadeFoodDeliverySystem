@@ -9,13 +9,16 @@ gem 'jbuilder', '~> 2.0'
 
 gem 'railties', '~>6.0.2.2'
 
-group :production do
-  gem 'pg', '0.15.1'
+
+group :development, :production do
+  gem 'pg'
 end
 
-group :development,:test do
-
+group :test do
   gem 'sqlite3', '1.4.1'
+end
+
+group :development do
   gem 'web-console'
   gem 'listen', '~> 3.0.5'
   gem 'spring'
