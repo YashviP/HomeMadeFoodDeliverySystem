@@ -10,7 +10,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'railties', '~>6.0.2.2'
 
 
-group :development, :production do
+group :production do
   gem 'pg'
 end
 
@@ -19,12 +19,14 @@ group :test do
 end
 
 group :development do
+  gem 'pg'
   gem 'web-console'
   gem 'listen', '~> 3.0.5'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'better_errors'
   gem 'rails_layout'
+
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]

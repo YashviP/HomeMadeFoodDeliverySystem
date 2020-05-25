@@ -10,3 +10,15 @@ W, [2020-05-25T18:57:18.255436 #3519]  WARN -- : Creating scope :not_geocoded. O
 W, [2020-05-25T18:57:18.255640 #3519]  WARN -- : Creating scope :not_reverse_geocoded. Overwriting existing method Customer.not_reverse_geocoded.
 W, [2020-05-25T18:57:18.255833 #3519]  WARN -- : Creating scope :near. Overwriting existing method Customer.near.
 W, [2020-05-25T18:57:18.256017 #3519]  WARN -- : Creating scope :within_bounding_box. Overwriting existing method Customer.within_bounding_box.
+W, [2020-05-25T19:06:58.631476 #4517]  WARN -- : Creating scope :with_attached_profile_image. Overwriting existing method Chef.with_attached_profile_image.
+W, [2020-05-25T19:06:58.631737 #4517]  WARN -- : Creating scope :geocoded. Overwriting existing method Chef.geocoded.
+W, [2020-05-25T19:06:58.631822 #4517]  WARN -- : Creating scope :not_geocoded. Overwriting existing method Chef.not_geocoded.
+W, [2020-05-25T19:06:58.631895 #4517]  WARN -- : Creating scope :not_reverse_geocoded. Overwriting existing method Chef.not_reverse_geocoded.
+W, [2020-05-25T19:06:58.631966 #4517]  WARN -- : Creating scope :near. Overwriting existing method Chef.near.
+W, [2020-05-25T19:06:58.632034 #4517]  WARN -- : Creating scope :within_bounding_box. Overwriting existing method Chef.within_bounding_box.
+W, [2020-05-25T19:06:58.634391 #4517]  WARN -- : Creating scope :with_attached_profile_image. Overwriting existing method Customer.with_attached_profile_image.
+W, [2020-05-25T19:06:58.634617 #4517]  WARN -- : Creating scope :geocoded. Overwriting existing method Customer.geocoded.
+W, [2020-05-25T19:06:58.634697 #4517]  WARN -- : Creating scope :not_geocoded. Overwriting existing method Customer.not_geocoded.
+W, [2020-05-25T19:06:58.634769 #4517]  WARN -- : Creating scope :not_reverse_geocoded. Overwriting existing method Customer.not_reverse_geocoded.
+W, [2020-05-25T19:06:58.634835 #4517]  WARN -- : Creating scope :near. Overwriting existing method Customer.near.
+W, [2020-05-25T19:06:58.634900 #4517]  WARN -- : Creating scope :within_bounding_box. Overwriting existing method Customer.within_bounding_box.
