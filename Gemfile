@@ -6,19 +6,16 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails'
 gem 'jquery-rails'
 gem 'jbuilder', '~> 2.0'
-gem 'sqlite3', '~> 1.4.2'
+
 gem 'railties', '~>6.0.2.2'
 
 group :production do
   gem 'pg', '0.15.1'
 end
 
-group :test do
-  gem 'sqlite3', '1.3.6'
-end
-group :development do
+group :development,:test do
 
-  gem 'sqlite3', '1.3.6'
+  gem 'sqlite3', '1.4.1'
   gem 'web-console'
   gem 'listen', '~> 3.0.5'
   gem 'spring'
