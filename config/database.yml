@@ -28,5 +28,3 @@ production:
   pool: 5
   username: yashvi
   password: yashvi@2903   ### password you have specified within psql
-  host: localhost
-  port: 5432    
