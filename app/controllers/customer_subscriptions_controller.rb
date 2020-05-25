@@ -2,8 +2,8 @@ class CustomerSubscriptionsController < ApplicationController
 	
 	before_action :authenticate_user! 
 	before_action :check_expired_subscriptions
-
-	before_action :check_role, only: [:index,:show,:subscribe],if: :user_is_chef
+	
+	
 
 	def user_is_chef
 		user_signed_in? and current_user.is_chef== true
@@ -25,10 +25,14 @@ class CustomerSubscriptionsController < ApplicationController
  		@customer_subscriptions=CustomerSubscription.where(:user_id => current_user.id)
  	end
 
- 	def show		
- 		@customer_subscription=CustomerSubscription.find_by(params[:id],:user_id => current_user.id)
- 		@subscription=Subscription.find(@customer_subscription.subscription_id)
- 		@chef=User.find(@subscription.user_id) 
+ 	def show	
+ 		begin	
+ 			@customer_subscription=CustomerSubscription.where(:subscription_id=>params[:id],:user_id => current_user.id)
+ 			@subscription=Subscription.find(@customer_subscription.subscription_id)
+ 			@chef=User.find(@subscription.user_id) 
+ 		rescue
+ 			render file: 'public/404.html', status: 404 
+ 		end
  	end
 
  	def check_expired_subscriptions

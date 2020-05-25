@@ -1,218 +1,223 @@
-<hr>
-<div class="head_outer1">
-    <div class="head_outer2">
-        <div class="head_inner">      
-            <h1 class="head_outer3">MENU</h1>
-        </div>   
-    </div>
+ <hr>
+ <div class="head_outer1">
 
-    <div class="box_outer">
-        <div class="box_inner">
-            <table class="table_">
-                <hr>
+  <div class="head_outer2" >
+    <div class="head_inner" >
+      
+      <h1 class="head_outer3">MENU</h1>
+    </div>   
 
-                <div class="row">
+  </div>
+   <div class="box_outer">
+    <div class="box_inner">
+   <table class="table_">
+        <hr>
+
+        <div class="row">
             
-                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 mb40">
-                        <div class="menu-block">
-                            <h3 class="menu-title">BREAKFAST</h3>
-                            <div class="menu-content">
-                                <div class="row">
-                                    <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
-                                        <div class="dish-content">
-                                            <h5 class="dish-title"><a href="#">SUNDAY</a></h5>
-                                            <span class="dish-meta"><%= @subscription.breakfast[:sunday]%></span>
-                                            <div class="dish-price">
-                                            </div>
-                                        </div>
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 mb40">
+                <div class="menu-block">
+                    <h3 class="menu-title">BREAKFAST</h3>
+                    <div class="menu-content">
+                        <div class="row">
+                            <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+                                <div class="dish-content">
+                                    <h5 class="dish-title"><a href="#">SUNDAY</a></h5>
+                                    <span class="dish-meta"><%= @subscription.breakfast[:sunday]%></span>
+                                    <div class="dish-price">
                                     </div>
-                                </div>
-                            </div>
-                            <div class="menu-content">
-                                <div class="row">
-                                    <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
-                                        <div  class="dish-content">
-                                            <h5 class="dish-title"><a href="#">MONDAY</a></h5>
-                                            <span class="dish-meta"><%= @subscription.breakfast[:monday]%></span>
-                                            <div class="dish-price">
-                                            </div>
-                                        </div>
                                     </div>
-                                </div>
-                            </div>
-                        
-
-                        <div class="menu-content">
-                            <div class="row">
-                                <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
-                                    <div class="dish-content">
-                                        <h5 class="dish-title"><a href="#">TUESDAY</a></h5>
-                                        <span class="dish-meta"><%= @subscription.breakfast[:tuesday]%></span>
-                                        <div class="dish-price">
-                                        </div>
-                                    </div>
-                                </div>
                             </div>
                         </div>
-
-                        <div class="menu-content">
-                            <div class="row">
-                                <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
-                                    <div class="dish-content">
-                                        <h5 class="dish-title"><a href="#">WEDNESDAY</a></h5>
-                                        <span class="dish-meta"><%= @subscription.breakfast[:wednesday]%></span>
-                                        <div class="dish-price">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="menu-content">
-                            <div class="row">
-                                <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
-                                    <div class="dish-content">
-                                        <h5 class="dish-title"><a href="#">THURSDAY</a></h5>
-                                        <span class="dish-meta"><%= @subscription.breakfast[:thursday]%></span>
-                                        <div class="dish-price">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div class="menu-content">
-                            <div class="row">
-                                <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
-                                    <div class="dish-content">
-                                        <h5 class="dish-title"><a href="#">FRIDAY</a></h5>
-                                        <span class="dish-meta"><%= @subscription.breakfast[:friday]%></span>
-                                        <div class="dish-price">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="menu-content">
-                            <div class="row">
-                                <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
-                                    <div class="dish-content">
-                                        <h5 class="dish-title"><a href="#">SATURDAY</a></h5>
-                                        <span class="dish-meta"><%= @subscription.breakfast[:saturday]%></span>
-                                        <div class="dish-price">
-                                        </div>
-                                    </div>
+                    </div>
+                    <div class="menu-content">
+                        <div class="row">
+                            <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+                               <div  class="dish-content">
+                                    <h5 class="dish-title"><a href="#">MONDAY</a></h5>
+                                    <span class="dish-meta"><%= @subscription.breakfast[:monday]%></span>
+                                    <div class="dish-price">
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-               
-                <% if @subscription.lunch.empty? ==false %>
-                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 mb40">
-                        <div class="menu-block">
-                            <h3 class="menu-title">LUNCH</h3>
-                            <div class="menu-content">
-                                <div class="row">
-                                    <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
-                                        <div class="dish-content">
-                                            <h5 class="dish-title"><a href="#">SUNDAY</a></h5>
-                                            <span class="dish-meta"><%= @subscription.lunch[:sunday]%></span>
-                                            <div class="dish-price">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="menu-content">
-                                <div class="row">
-                                    <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
-                                        <div class="dish-content">
-                                            <h5 class="dish-title"><a href="#">MONDAY</a></h5>
-                                            <span class="dish-meta"><%= @subscription.lunch[:monday]%></span>
-                                            <div class="dish-price">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="menu-content">
-                 			    <div class="row">
-                                    <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
-                                        <div class="dish-content">
-                                            <h5 class="dish-title"><a href="#">TUESDAY</a></h5>
-                                            <span class="dish-meta"><%= @subscription.lunch[:tuesday]%></span>
-                                            <div class="dish-price">
-                                            </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                        
 
-                            <div class="menu-content">
-                 			    <div class="row">
-                                    <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
-                                        <div class="dish-content">
-                                            <h5 class="dish-title"><a href="#">WEDNESDAY</a></h5>
-                                            <span class="dish-meta"><%= @subscription.lunch[:wednesday]%></span>
-                                            <div class="dish-price">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="menu-content">
-                 			    <div class="row">
-                                    <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
-                                        <div class="dish-content">
-                                            <h5 class="dish-title"><a href="#">THURSDAY</a></h5>
-                                            <span class="dish-meta"><%= @subscription.lunch[:thursday]%></span>
-                                            <div class="dish-price">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="menu-content">
-                 			    <div class="row">
-                                    <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
-                                        <div class="dish-content">
-                                            <h5 class="dish-title"><a href="#">FRIDAY</a></h5>
-                                            <span class="dish-meta"><%= @subscription.lunch[:friday]%></span>
-                                            <div class="dish-price">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="menu-content">
-                 			    <div class="row">
-                                    <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
-                                        <div class="dish-content">
-                                            <h5 class="dish-title"><a href="#">SATURDAY</a></h5>
-                                            <span class="dish-meta"><%= @subscription.lunch[:saturday]%></span>
-                                            <div class="dish-price">
-                                            </div>
-                                        </div>
-                                    </div>
+                <div class="menu-content">
+                    <div class="row">
+                        <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+                            <div class="dish-content">
+                                <h5 class="dish-title"><a href="#">TUESDAY</a></h5>
+                                <span class="dish-meta"><%= @subscription.breakfast[:tuesday]%></span>
+                                <div class="dish-price">
                                 </div>
                             </div>
                         </div>
                     </div>
-               	<% end %>
+                </div>
+
+                <div class="menu-content">
+                    <div class="row">
+                        <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+                            <div class="dish-content">
+                                <h5 class="dish-title"><a href="#">WEDNESDAY</a></h5>
+                                <span class="dish-meta"><%= @subscription.breakfast[:wednesday]%></span>
+                                <div class="dish-price">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                        <div class="menu-content">
+                            <div class="row">
+                                    <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+                                    <div class="dish-content">
+                                        <h5 class="dish-title"><a href="#">THURSDAY</a></h5>
+                                        <span class="dish-meta"><%= @subscription.breakfast[:thursday]%></span>
+                                        <div class="dish-price">
+                                    </div>
+                                    </div>
+                                 </div>
+                            </div>
+                        </div>
+
+
+                        <div class="menu-content">
+                            <div class="row">
+                                    <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+                                    <div class="dish-content">
+                                        <h5 class="dish-title"><a href="#">FRIDAY</a></h5>
+                                        <span class="dish-meta"><%= @subscription.breakfast[:friday]%></span>
+                                        <div class="dish-price">
+                                    </div>
+                                    </div>
+                                 </div>
+                            </div>
+                        </div>
+
+                        <div class="menu-content">
+                            <div class="row">
+                                    <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+                                    <div class="dish-content">
+                                        <h5 class="dish-title"><a href="#">SATURDAY</a></h5>
+                                        <span class="dish-meta"><%= @subscription.breakfast[:saturday]%></span>
+                                        <div class="dish-price">
+                                    </div>
+                                    </div>
+                                 </div>
+                            </div>
+                        </div>
+
+
+
+
+                    </div>
+                </div>
+               
+                <% if @subscription.lunch.empty? ==false %>
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 mb40">
+                    <div class="menu-block">
+                        <h3 class="menu-title">LUNCH</h3>
+                        <div class="menu-content">
+                             <div class="row">
+                                    <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+                                    <div class="dish-content">
+                                        <h5 class="dish-title"><a href="#">SUNDAY</a></h5>
+                                        <span class="dish-meta"><%= @subscription.lunch[:sunday]%></span>
+                                        <div class="dish-price">
+                                    </div>
+                                    </div>
+                                 </div>
+                            </div>
+                        </div>
+                        <div class="menu-content">
+                            <div class="row">
+                                    <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+                                    <div class="dish-content">
+                                        <h5 class="dish-title"><a href="#">MONDAY</a></h5>
+                                        <span class="dish-meta"><%= @subscription.lunch[:monday]%></span>
+                                        <div class="dish-price">
+                                    </div>
+                                    </div>
+                                 </div>
+                            </div>
+                        </div>
+                        <div class="menu-content">
+                            <div class="row">
+                                    <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+                                    <div class="dish-content">
+                                        <h5 class="dish-title"><a href="#">TUESDAY</a></h5>
+                                        <span class="dish-meta"><%= @subscription.lunch[:tuesday]%></span>
+                                        <div class="dish-price">
+                                    </div>
+                                    </div>
+                                 </div>
+                            </div>
+                        </div>
+
+                         <div class="menu-content">
+                            <div class="row">
+                                    <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+                                    <div class="dish-content">
+                                        <h5 class="dish-title"><a href="#">WEDNESDAY</a></h5>
+                                        <span class="dish-meta"><%= @subscription.lunch[:wednesday]%></span>
+                                        <div class="dish-price">
+                                    </div>
+                                    </div>
+                                 </div>
+                            </div>
+                        </div>
+                         <div class="menu-content">
+                            <div class="row">
+                                    <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+                                    <div class="dish-content">
+                                        <h5 class="dish-title"><a href="#">THURSDAY</a></h5>
+                                        <span class="dish-meta"><%= @subscription.lunch[:thursday]%></span>
+                                        <div class="dish-price">
+                                    </div>
+                                    </div>
+                                 </div>
+                            </div>
+                        </div>
+
+                        <div class="menu-content">
+                            <div class="row">
+                                    <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+                                    <div class="dish-content">
+                                        <h5 class="dish-title"><a href="#">FRIDAY</a></h5>
+                                        <span class="dish-meta"><%= @subscription.lunch[:friday]%></span>
+                                        <div class="dish-price">
+                                    </div>
+                                    </div>
+                                 </div>
+                            </div>
+                        </div>
+
+                         <div class="menu-content">
+                            <div class="row">
+                                    <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+                                    <div class="dish-content">
+                                        <h5 class="dish-title"><a href="#">SATURDAY</a></h5>
+                                        <span class="dish-meta"><%= @subscription.lunch[:saturday]%></span>
+                                        <div class="dish-price">
+                                    </div>
+                                    </div>
+                                 </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <% end %>
                
                 
                 <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 mb40">
                     <div class="menu-block">
                         <h3 class="menu-title">DINNER</h3>
                         <div class="menu-content">
-                 			<div class="row">
+                            <div class="row">
                                     <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
                                     <div class="dish-content">
                                         <h5 class="dish-title"><a href="#">SUNDAY</a></h5>
@@ -287,21 +292,24 @@
                         <div class="menu-content">
                             <div class="row">
                                     <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
-                                        <div class="dish-content">
-                                            <h5 class="dish-title"><a href="#">SATURDAY</a></h5>
-                                            <span class="dish-meta"><%= @subscription.dinner[:saturday]%></span>
-                                            <div class="dish-price">
-                                            </div>
-                                        </div>
+                                    <div class="dish-content">
+                                        <h5 class="dish-title"><a href="#">SATURDAY</a></h5>
+                                        <span class="dish-meta"><%= @subscription.dinner[:saturday]%></span>
+                                        <div class="dish-price">
                                     </div>
-                                </div>
+                                    </div>
+                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+              
             </div>
-        </div>
-    </table>
+           </div>
     </div>
-</div>
 
+
+</table>
+
+</div>
+</div>

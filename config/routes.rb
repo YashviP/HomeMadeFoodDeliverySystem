@@ -57,8 +57,10 @@
 
 
   mount ActionCable.server => '/cable'
-  mount Sidekiq::Web => '/sidekiq'
 
+  #require 'sidekiq/web'
+  #require 'sidekiq-scheduler/web'
+ # mount Sidekiq::Web => '/sidekiq'
   resources :notifications, only: [:index, :update]
   match '*path', to: "application#render_404", via: :all, constraints: lambda {|req| req.path.exclude? 'rails/active_storage'}
  

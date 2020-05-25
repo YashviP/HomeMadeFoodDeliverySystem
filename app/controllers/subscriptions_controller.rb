@@ -4,20 +4,15 @@ class SubscriptionsController < ApplicationController
 
 	before_action :authenticate_user!
 	before_action :check_role, only: [:main,:new, :create,:display_customers],if: :user_is_customer
-	before_action :check_role, only: [:index,:list,:menu],if: :user_is_chef
+
 
 	def user_is_customer
 		user_signed_in? and current_user.is_chef== false
-	end
-	def user_is_chef
-		user_signed_in? and current_user.is_chef== true
 	end
 
 	def check_role
     	render file: 'public/404.html', status: 404 
   	end
-
-
 	
 	def index		
 		begin params[:search]

@@ -7,7 +7,7 @@ class ApplicationController < ActionController::Base
   #devise_group :user, contains: [:customer, :chef]
 
   before_action :configure_permitted_parameters, if: :devise_controller? 
-
+  
   def default_url_options
       {:locale => I18n.locale}
   end

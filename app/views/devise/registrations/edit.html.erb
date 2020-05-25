@@ -9,14 +9,14 @@
       <div style="margin-left:60px;"> 
         <% if user_signed_in? %>
           <% if current_user.profile_image.attached? %>
-              <%= image_tag(current_customer.profile_image,:class=> "image_edit")%>
+              <%= image_tag(current_user.profile_image,:class=> "image_edit")%>
       
           <% else %>
               <%= image_tag("https://p7.hiclipart.com/preview/749/84/910/chef-cooking-vector-chef-hat.jpg", size: "100x100",style: "float:left;margin:20px;border-radius: 100px;" ) %>
           <% end %>
         <% else %>
           <% if current_user.profile_image.attached? %>
-              <%= image_tag(current_chef.profile_image,:class=> "image_edit")%>
+              <%= image_tag(current_user.profile_image,:class=> "image_edit")%>
       
           <% else %>
               <%= image_tag("https://p7.hiclipart.com/preview/749/84/910/chef-cooking-vector-chef-hat.jpg", size: "100x100",style: "float:left;margin:20px;border-radius: 100px;" ) %>

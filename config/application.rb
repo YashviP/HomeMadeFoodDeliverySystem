@@ -12,9 +12,8 @@ module Template
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
-   config.after_initialize do |app|
-   app.routes.append{ match '*a', :to => 'application#not_found' } unless config.consider_all_requests_local
-	end
+    #config.active_job.queue_adapter = :sidekiq
+	
  
   end
 end
