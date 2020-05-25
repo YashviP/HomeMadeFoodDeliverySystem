@@ -8,18 +8,8 @@ gem 'jquery-rails'
 gem 'jbuilder', '~> 2.0'
 
 gem 'railties', '~>6.0.2.2'
-
-
-group :production do
-  gem 'pg'
-end
-
-group :test do
-  gem 'sqlite3', '1.4.1'
-end
-
+gem 'pg'
 group :development do
-  gem 'pg'
   gem 'web-console'
   gem 'listen', '~> 3.0.5'
   gem 'spring'
