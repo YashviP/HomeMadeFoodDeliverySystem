@@ -22,7 +22,11 @@ test:
 
 production:
   <<: *default
-  adapter:  postgresql
-  database: contacts_production
-  username: contacts
-  password: <%= ENV['CONTACTS_DATABASE_PASSWORD'] %>
+  adapter: postgresql
+  encoding: unicode
+  database: homemade_directory_development
+  pool: 5
+  username: yashvi
+  password: yashvi@2903   ### password you have specified within psql
+  host: localhost
+  port: 5432    
