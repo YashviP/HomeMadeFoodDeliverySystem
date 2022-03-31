@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 gem 'rails', '~> 6.0.2'
-gem 'puma', '~> 3.0'
+gem 'puma', '~> 5.6'
 gem 'sass-rails'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails'
